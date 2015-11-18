@@ -9,16 +9,4 @@
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<nav>
-		<div class="navBar">
-			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="index.php">Restaurants</a></li>
-				<li><a href="index.php">Contact</a></li>
-				<li><a href="index.php">Over</a></li>
-			</ul>
-		</div>
-	</nav>
-	
-
 </head>
