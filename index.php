@@ -16,7 +16,7 @@
 
         <!-- content -->
         <h1>Hello world! Dit is het begin van AllergieCheck.net</h1>
-        <p>test</p>
+        <p>test, aanpassing</p>
 
 
 
