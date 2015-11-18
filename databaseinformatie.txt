@@ -1,7 +1,0 @@
-Databasehost:	db4free.net
-Databasename:	allergiecheck
-Databaseuser:	allergiecheck
-password:	sinterklaas
-
-
-PHPMYADMIN:	http://www.db4free.net/phpMyAdmin/
