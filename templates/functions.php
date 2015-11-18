@@ -1,0 +1,7 @@
+<?php 
+
+// algemene functies
+
+
+
+?>
