@@ -1,0 +1,32 @@
+
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+
+body {
+	font-family: roboto;
+}
+
+.navBar {
+	display: inline-block;
+	background-color: #d90000;
+	width: 100%;
+	height: 56px;
+}
+
+.navBar ul {
+	color: white;
+	float: right;
+	line-height: 56px;
+	margin-right: 12px;
+}
+
+.navBar li {
+	display: inline;
+}
+
+.navBar a {
+	color: white;
+	text-decoration: none;
+	margin-right: 12px;
+}
