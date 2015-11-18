@@ -9,9 +9,12 @@
 
 
         <!-- content -->
-        <h1>Restaurants</h1>
+        <div class="underNav"></div>
+        <div class="container">
+        	<h1>Restaurants</h1>
 
-        <p>lipsum</p>
+        	<p>lipsum</p>
+        </div>
 
         <?php include "templates/footer.php" ?>
         

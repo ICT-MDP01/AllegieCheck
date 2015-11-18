@@ -9,9 +9,13 @@
 
 
         <!-- content -->
-        <h1>Contact</h1>
+        <div class="underNav"></div>
+        <div class="container">
+        	<h1>Contact</h1>
 
-        <p>lipsum</p>
+        	<p>lipsum</p>
+        </div>
+        
 
         <?php include "templates/footer.php" ?>
         
