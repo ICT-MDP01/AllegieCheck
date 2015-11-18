@@ -11,7 +11,7 @@
         <!-- content -->
         <h1>Welkom</h1>
 
-        <p>lipsum</p>
+        <p>laurens</p>
 
         <?php include "templates/footer.php" ?>
         
