@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
-    
-    <?php include "templates/database.php" ?>
+
     <?php include "templates/head.php" ?>
 
     <body>
