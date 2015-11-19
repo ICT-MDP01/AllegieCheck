@@ -1,4 +1,7 @@
 <head>
+
+	<?php include "database.php" ?>
+
 	<meta charset="utf-8">
 	<title>AllergieCheck</title>
 	<meta name="description" content="">
