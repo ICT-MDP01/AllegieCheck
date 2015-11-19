@@ -12,14 +12,9 @@
              
 
         include "templates/header.php" ?>
-
+        
 
         <!-- content -->
-        <h1>Contact</h1>
-
-        <p>invultekst contactgegevens voor eigenaar site(moet nog komen)</p>
-        
-        <p>Laat hier uw mening achter of geef uw feedback</p>
         
         <form method="get" action="contact.php">
        <textarea name="mening"></textarea>
@@ -27,8 +22,8 @@
              <input type="submit" name="Verstuur" value="Verstuur"><br>
 
         	<?php
-        	  
-        	  
+
+        	  print_r ($_GET);
               
 
         	?>
