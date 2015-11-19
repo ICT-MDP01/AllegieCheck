@@ -6,27 +6,30 @@
     <body>
 
         
-        <?php 
+        <?php include "templates/header.php" ?>
      
 
              
 
-        include "templates/header.php" ?>
+        
         
 
         <!-- content -->
         
-        <form method="get" action="contact.php">
-       <textarea name="mening"></textarea>
-        	
-             <input type="submit" name="Verstuur" value="Verstuur"><br>
+        <div class='contact'>
+            <h1>Contact</h1>
 
-        	<?php
-
-        	  print_r ($_GET);
+            <p>invultekst contactgegevens voor eigenaar site(moet nog komen)</p>
+            
+            <p>Laat hier uw mening achter of geef uw feedback</p>
+            
+            <form method="get" action="contact.php">
+                <textarea name="mening"></textarea><br>
+                <input type="submit" name="Verstuur" value="Verstuur"><br>
+           </form>
+       </div>
               
-
-        	?>
+        	
         <?php include "templates/footer.php" ?>
         
     </body>
