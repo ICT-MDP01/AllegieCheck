@@ -1,0 +1,27 @@
+div.imageContainer{
+	background-image: url("http://i.imgur.com/fPyjS02.jpg?1");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% 85%;
+	height: 320px;
+	min-width: 100%;
+	position: relative;
+	border: solid 2px black;
+}
+
+div.imageContainer div.imageText{
+	position: absolute;
+	bottom: -20px;
+	left: 2%;
+}
+
+div.container{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 2%;
+}
+
+div.text{
+	margin-top: 3.5%;
+	left: 2%;
+}
