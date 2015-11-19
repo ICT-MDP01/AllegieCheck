@@ -1,5 +1,14 @@
 <!doctype html>
 <html>
+<<<<<<< HEAD
+=======
+
+    <?php include "templates/head.php" ?>
+
+    <body>
+
+        <?php include "templates/header.php" ?>
+>>>>>>> refs/remotes/origin/master
 
 <?php include "templates/database.php" ?>
 <?php include "templates/head.php" ?>
