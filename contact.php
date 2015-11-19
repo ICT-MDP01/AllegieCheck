@@ -5,14 +5,33 @@
 
     <body>
 
-        <?php include "templates/header.php" ?>
+        
+        <?php 
+     
+
+             
+
+        include "templates/header.php" ?>
 
 
         <!-- content -->
         <h1>Contact</h1>
 
-        <p>lipsum</p>
+        <p>invultekst contactgegevens voor eigenaar site(moet nog komen)</p>
+        
+        <p>Laat hier uw mening achter of geef uw feedback</p>
+        
+        <form method="get" action="contact.php">
+       <textarea name="mening"></textarea>
+        	
+             <input type="submit" name="Verstuur" value="Verstuur"><br>
 
+        	<?php
+        	  
+        	  
+              
+
+        	?>
         <?php include "templates/footer.php" ?>
         
     </body>
