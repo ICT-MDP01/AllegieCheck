@@ -1,16 +1,20 @@
 <!doctype html>
 <html>
-    
-    <?php include "templates/database.php" ?>
-    <?php include "templates/head.php" ?>
 
-    <body>
+<?php include "templates/database.php" ?>
+<?php include "templates/head.php" ?>
 
-        <?php include "templates/header.php" ?>
+<body>
+    <?php include "templates/header.php" ?>
 
 
-        <!-- content -->
-        <h1>Welkom</h1>
+    <!-- content -->
+    <div class="bigImage">
+        <div class="overflowImage">
+        </div>
+    </div>
+
+        <div class="container">
         <p>Dit is een paragraaf</p> 
 
         <p>Als de database connectie is gelukt dan staat er hieronder een lijstje met onze namen:</p>
@@ -28,7 +32,10 @@
 
         ?>
 
-        <?php include "templates/footer.php" ?>
-        
-    </body>
+    </div>
+
+
+    <?php include "templates/footer.php" ?>
+
+</body>
 </html>

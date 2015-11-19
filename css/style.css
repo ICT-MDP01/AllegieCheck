@@ -7,31 +7,13 @@ body {
 }
 
 .navBar {
-	display: inline-block;
 	background-color: #99CB38;
 	width: 100%;
 	min-height: 65px;
+	position: fixed;
 
 	/* Shadow, use this as a standard under components that should "lift" */
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-.navBar ul {
-	color: white;
-	float: right;
-	line-height: 65px;
-	margin-right: 12px;
-	margin-bottom: 0px;
-}
-
-.navBar li {
-	display: inline;
-}
-
-.navBar a {
-	color: white;
-	text-decoration: none;
-	margin-right: 12px;
 }
 
 .navBar .logoAndTitle {
@@ -57,3 +39,75 @@ body {
 	display: inline-block;
 	float: inherit;
 }
+
+.navBar ul {
+	color: white;
+	display: inline-block;
+	float: right;
+	line-height: 65px;
+	margin-right: 12px;
+	margin-left: 12px;
+	margin-bottom: 0px;
+}
+
+.navBar li {
+	display: inline;
+}
+
+.navBar a {
+	color: white;
+	text-decoration: none;
+	margin-right: 12px;
+}
+
+.bigImage {
+	padding-top: 130px;
+	min-width: auto;
+	height: 325px;
+	overflow: hidden;
+}
+
+.bigImage .overflowImage {
+	background-image: url(/img/wok.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+/* Larger than mobile */
+@media (min-width: 507px) {
+	.bigImage {
+		padding-top: 65px;
+	}
+}
+
+@media (min-width: 487px) {
+	.bigImage .overflowImage {
+		background-size: 100% auto;
+	}
+}
+
+@media (min-width: 600px) {
+	.bigImage {
+		height: 400px;
+	}
+}
+@media (min-width: 750px) {
+	.bigImage {
+		height: 500px;
+	}
+}
+@media (min-width: 900px) {
+	.bigImage {
+		height: 600px;
+	}
+}
+
+@media (min-width: 1050px) {
+	.bigImage {
+		height: 700px;
+	}
+}
+
