@@ -10,7 +10,7 @@
 			</ul>
 
 			<a href="index.php" class="logoAndTitle">
-				<img src="/img/logo512.png" alt="">
+				<img src="img/logo512.png" alt="">
 				<h1>Allergiecheck</h1>
 			</a>
 			
