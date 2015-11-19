@@ -4,16 +4,8 @@
     <?php include "templates/head.php" ?>
 
     <body>
-
-        
+    
         <?php include "templates/header.php" ?>
-     
-
-             
-
-        
-        
-
         <!-- content -->
         
         <div class='contact'>

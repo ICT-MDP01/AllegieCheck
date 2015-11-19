@@ -3,18 +3,10 @@
 	<nav>
 		<div class="navBar">
 
-<<<<<<< HEAD
-			<div class="logoAndTitle">
-				<img src="img/logo512.png" alt="">
-				<h1>Allergiecheck</h1>
-			</div>
-=======
 			<a href="index.php" class="logoAndTitle">
 				<img src="img/logo512.png" alt="">
 				<h1>Allergiecheck</h1>
 			</a>
-			
->>>>>>> refs/remotes/origin/master
 
 			<div class="navItemsList">
 				<ul>
@@ -26,8 +18,6 @@
 			</div>
 			
 		</div>
-
 	</nav>
-		
 
 </header>
