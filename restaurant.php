@@ -8,7 +8,7 @@
         <?php include "templates/header.php" ?>
 
         <!-- content -->
-        <div class = "imageContainer">
+        <div class = "imageContainer underNav">
         	<div class = "imageText">
         		<h3>*RESTAURANT NAAM*</h3>
         	</div>

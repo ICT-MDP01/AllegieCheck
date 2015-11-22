@@ -1,7 +1,7 @@
 <header>
 	
 	<nav>
-		<div class="navBar">
+		<div class="navBar shadow">
 
 			<a href="index.php" class="logoAndTitle">
 				<img src="img/logo512.png" alt="">
