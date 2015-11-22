@@ -6,6 +6,15 @@ body {
 	font-family: 'Roboto';
 }
 
+/* Utility elements */
+.shadow { /* use this to add a shadow to components */
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.underNav {
+	padding-top: 130px;
+}
+
 
 /* Navigation bar (TOP OF SCREEN) */
 .navBar {
@@ -13,9 +22,7 @@ body {
 	width: 100%;
 	min-height: 65px;
 	position: fixed;
-
-	/* Shadow, use this as a standard under components that should "lift" */
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	z-index: 100; /* To always have navBar on top */
 }
 
 .navBar .logoAndTitle {
@@ -50,6 +57,7 @@ body {
 
 .navItemsList {
 	display: inline-block;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -70,7 +78,6 @@ body {
 
 /* HOMEPAGE */
 .bigImage {
-	padding-top: 130px;
 	min-width: auto;
 	height: 325px;
 	overflow: hidden;
@@ -86,18 +93,19 @@ body {
 }
 
 /* bigImage sizes */
-@media (min-width: 507px) {
-	.bigImage {
-		padding-top: 65px;
-	}
-
-	.navItemsList {
-		float: right;
-	}
-}
 @media (min-width: 487px) {
 	.bigImage .overflowImage {
 		background-size: 100% auto;
+	}
+}
+@media (min-width: 550px) {
+	.navItemsList {
+		display: inline-block;
+		width: auto;
+		float: right;
+	}
+	.underNav {
+		padding-top: 65px;
 	}
 }
 @media (min-width: 600px) {
@@ -122,11 +130,12 @@ body {
 }
 
 .formDiv {
-	background-color: rgba(255,255,255, 0.95);
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.95);
 	vertical-align: middle;
-	padding: auto;
+	margin-right: -24px;
+	margin-left: -24px;
 	border-radius: 4px;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .formDiv form {
@@ -134,3 +143,34 @@ body {
 	margin: 0px;
 }
 
+.searchBar {
+	border-radius: 4px;
+	height: 50px;
+	margin-bottom: 24px;
+}
+
+input[type="text"].searchText {
+	border-radius: 0px;
+	border: 0px;
+	border-bottom: 4px solid #99CB38;
+	height: 100%;
+	margin: 0px;
+	margin-right: 24px;
+	width: calc(100% - 74px);
+	font-size: 32px;
+	background-color: rgba(255, 255, 255, 0.0);
+}
+
+
+input[type="submit"].searchButton {
+	border-radius: 0px;
+	border: 0px;
+	border-radius: 4px;
+	background-color: #99CB38;
+	color: white;
+	height: 50px;
+	width: 50px;
+	padding: 0px;
+	margin: 0px;
+	float: right;
+}
