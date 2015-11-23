@@ -12,9 +12,9 @@
                     <div class="formDiv shadow">
 
                         <form method="get" action="restaurants.php">
-                            <div class="searchBar">
+                            <div class="searchBar shadow">
                                 <input type="text" name="query" class="searchText" placeholder="Zoek een stad of restaurant type">
-                                <input type="submit" value="" class="searchButton shadow"><br>
+                                <input type="submit" value="" class="searchButton"><br>
                             </div>
 
                             <!-- for Skeleton, checkboxes are prefereably wrapped in <label> tags -->
