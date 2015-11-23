@@ -7,6 +7,35 @@ body {
 	font-family: 'Roboto';
 }
 
+ul, li {
+	display: inline-block;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #99CB38;
+}
+
+a:hover, 
+a:active {
+	color: #ddd;
+}
+
+.navLink:hover, 
+.navLink:active {
+	color: #222;
+}
+
+.navLink {
+	color: white;
+}
+
+.navLink:hover, 
+.navLink:active {
+	color: #ddd;
+}
+
 /* Utility elements */
 .shadow { 
 	/* use this to add a shadow to components */
@@ -20,21 +49,20 @@ body {
 
 .underNav { 
 	/* for every first child that would be displayed under the navigation bar without this class */
-	padding-top: 130px;
+	//padding-top: 130px;
 }
-
 
 /* Navigation bar (TOP OF SCREEN) */
 .navBar {
+	display: inline-block;
 	background-color: #99CB38;
 	width: 100%;
-	height: 130px;
-	position: fixed;
 	z-index: 100; /* To always have navBar on top */
 }
 
 .navBar .logoAndTitle {
 	display: inline-block;
+	width: 39%;
 	float: left;
 	margin-left: 10px;
 }
@@ -42,11 +70,13 @@ body {
 .navBar .logoAndTitle h1 {
 	color: white;
 	font-size: 25px;
-	line-height: 65px;
-	margin-bottom: 0px;
-	font-weight: 300;
+	margin: 18px 0 0 0;
 	display: inline-block;
 	float: inherit;
+}
+
+.navBar ul.navItemList {
+	float: right;
 }
 
 .navBar .logoAndTitle img {
@@ -57,50 +87,32 @@ body {
 	float: inherit;
 }
 
-.navBar a {
-	color: white;
-	text-decoration: none;
-	margin-right: 12px;
+.navBar .navItemsList {
+	float: right;
+	margin: 0 10px 0 0;
 }
 
-.navItemsList {
+.navItemsList a {
 	display: inline-block;
-	width: 100%;
-}
-
-.navItemsList ul {
-	line-height: 0px;
-	margin-bottom: 0px;
-	margin-left: 12px;
-	margin-right: 12px;
-}
-
-.navItemsList li {
-	display: inline-block;
-	margin-bottom: 0px;
-}
-
-.navItemsList .underLine {
-	height: 4px;
-	display: block;
-	width: 100%;
-}
-
-.navItemsList p {
-	margin-top: 4px;
-	line-height: 57px;
-	margin-bottom: 0px;
-	margin-right: 6px;
-	margin-left: 6px;
+	margin: 20px 10px; 
 	color: rgba(255, 255, 255, 0.9);
 }
 
-.navItemsList a:active .underLine {
-	background-color: rgba(255, 255, 255, 0.5);
+/* navbar login */
+.navBarLogin {
+	width: 100%;
+	height: 28px;
+	background-color: #87B331;
 }
 
-.navItemsList a:active p {
-	color: white;
+.navBarLogin ul {
+	float: right;
+	margin: 0 15px 0 0;
+}
+
+.navBarLogin a {
+	padding: 2px 5px;
+	font-size: 75%;
 }
 
 
@@ -117,24 +129,6 @@ body {
 	min-height: 100%;
 	min-width: 100%;
 	overflow: hidden;
-}
-
-/* bigImage sizes */
-@media (min-width: 550px) {
-	.navBar {
-		height: 65px;
-	}
-	.navItemsList {
-		display: inline-block;
-		width: auto;
-		float: right;
-	}
-	.underNav {
-		padding-top: 65px;
-	}
-	.bigImage .overflowImage {
-		background-size: 100% auto;
-	}
 }
 
 .formDiv {
