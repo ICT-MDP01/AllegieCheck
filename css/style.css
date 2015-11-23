@@ -142,29 +142,48 @@ body {
 	border-radius: 4px;
 }
 
-.formDiv form {
+.formDiv #checkBoxes {
 	padding: 24px;
 	margin: 0px;
 }
 
 .searchBar {
-	border-radius: 4px;
-	height: 50px;
-	margin-bottom: 24px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 24px;
+	background-color: #99CB38;
 }
 
 input[type="text"].searchText {
+	color: white;
 	border-radius: 0px;
 	border: 0px;
-	border-bottom: 4px solid #99CB38;
-	height: 100%;
+	border-bottom: 4px solid white;
+	height: 50px;
 	margin: 0px;
+	margin-bottom: 0px;
 	margin-right: 24px;
 	width: calc(100% - 74px);
 	font-size: 32px;
 	background-color: rgba(0, 0, 0, 0.0);
 	font-family: 'Roboto Condensed';
 	font-weight: 300;
+}
+
+::-webkit-input[type="text"]-placeholder {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255, 255, 255, 0.8);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255, 255, 255, 0.8);
+}
+
+:-ms-input[type="text"]-placeholder {  
+   color: rgba(255, 255, 255, 0.8);
 }
 
 
