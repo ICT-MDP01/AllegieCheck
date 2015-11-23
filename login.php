@@ -15,13 +15,17 @@
 	        <p>badumm tss</p>
 			
 			<form action="" method="post">
-				<h4>Gebruikersnaam</h4>
-				<input id="username" type="text">
+
+				<label for="email">Emailadres:
+					<input name="email" type="email" id="email">
+				</label>
 			
-				<h4>Wachtwoord</h4>
-				<input id="password" type="password">
-					<br>
-				<input type="submit" value="Inloggen">
+				<label for="password">Wachtwoord:
+					<input name="password" type="password" id="password">
+				</label>
+
+                <input type="submit" value="Inloggen">
+
 			</form>
 		</div>
 
