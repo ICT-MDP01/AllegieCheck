@@ -153,6 +153,15 @@ body {
 	margin-bottom: 24px;
 }
 
+.bordered {
+	border: solid black 2px;
+	margin-bottom: 10px;
+}
+
+.inBordered {
+	border-top: solid black 2px;
+}
+
 input[type="text"].searchText {
 	border-radius: 0px;
 	border: 0px;

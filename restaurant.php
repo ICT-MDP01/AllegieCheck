@@ -9,31 +9,20 @@
 
         <!-- content -->
         <div class = "imageContainer underNav">
-        	<div class = "imageText">
+        	<div>
         		<h3>*RESTAURANT NAAM*</h3>
         	</div>
         </div>
 
-        <div class = "container">
-        	<div class = "text">
+        <div>
+        	<div>
         		<h4>*Type*</h4>
         			type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type 
         	</div>
-        	<div class = "text">
+        	<div>
         		<h4>Menu</h4>
-        		<h5>Voorgerechten</h5>
+        		<h5>Gerechten</h5>
         		
-        		<?php         
-        			$statement = $pdo->prepare("SELECT * FROM testtabel");
-        			$statement->execute();
-        			print("text");
-        			while ($row = $statement->fetch()) {
-            			$naam = $row["naam"];
-            			$achternaam = $row["achternaam"];
-            			print($naam . " " . $achternaam . "<br>");
-        			}
-​				
-				?>
         	</div>
         </div>
 
