@@ -50,26 +50,12 @@
         </div>
 
         <div class="container">
-        <p>Dit is een paragraaf</p> 
 
-        <p>Als de database connectie is gelukt dan staat er hieronder een lijstje met onze namen:</p>
+            <p>Download de app</p>
 
-        <?php 
-        // php statement uit database
-        $statement = $pdo->prepare("SELECT * FROM testtabel");
-        $statement->execute();
+        </div>
 
-        while ($row = $statement->fetch()) {
-            $naam = $row["naam"];
-            $achternaam = $row["achternaam"];
-            print($naam . " " . $achternaam . "<br>");
-        }
+        <?php include "templates/footer.php" ?>
 
-        ?>
-
-    </div>
-
-    <?php include "templates/footer.php" ?>
-
-</body>
+    </body>
 </html>
