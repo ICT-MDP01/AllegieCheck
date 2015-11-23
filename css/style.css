@@ -206,3 +206,25 @@ input[type="submit"].searchButton {
 	margin: 0px;
 	float: right;
 }
+
+.bericht {
+ position: absolute;
+    right: 0px;
+    width: 300px;
+    border:3px solid #FFFFFF;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #99CB38;
+    border-radius: 25px;
+}
+
+.afbeelding {
+	position: absolute;
+    right: 0px;
+    width: 300px;
+    
+    padding: 10px;
+    
+   
+    border-radius: 25px;
+}
