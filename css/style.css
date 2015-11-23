@@ -116,6 +116,9 @@ body {
 
 /* bigImage sizes */
 @media (min-width: 550px) {
+	.navBar {
+		height: 65px;
+	}
 	.navItemsList {
 		display: inline-block;
 		width: auto;
