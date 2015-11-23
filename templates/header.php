@@ -10,10 +10,30 @@
 
 			<div class="navItemsList">
 				<ul>
-					<li class="navItem"><a href="index.php">Home</a></li>
-					<li class="navItem"><a href="restaurants.php">Restaurants</a></li>
-					<li class="navItem"><a href="contact.php">Contact</a></li>
-					<li class="navItem"><a href="over.php">Over</a></li>
+					<li>
+						<a href="index.php">
+							<p>Home</p>
+							<div class="underLine"></div>
+						</a>
+					</li>
+					<li>
+						<a href="restaurants.php">
+							<p>Restaurants</p>
+							<div class="underLine"></div>
+						</a>
+					</li>
+					<li>
+						<a href="contact.php">
+							<p>Contact</p>
+							<div class="underLine"></div>
+						</a>
+					</li>
+					<li>
+						<a href="over.php">
+							<p>Over ons</p>
+							<div class="underLine"></div>
+						</a>
+					</li>
 				</ul>
 			</div>
 			

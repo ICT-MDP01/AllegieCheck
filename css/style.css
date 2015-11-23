@@ -1,6 +1,7 @@
 
 
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+@import url(//fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 
 body {
 	font-family: 'Roboto';
@@ -22,7 +23,7 @@ body {
 .navBar {
 	background-color: #99CB38;
 	width: 100%;
-	min-height: 65px;
+	height: 130px;
 	position: fixed;
 	z-index: 100; /* To always have navBar on top */
 }
@@ -60,21 +61,41 @@ body {
 .navItemsList {
 	display: inline-block;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .navItemsList ul {
-	color: white;
-	display: inline-block;
-	line-height: 65px;
+	line-height: 0px;
 	margin-bottom: 0px;
 	margin-left: 12px;
 	margin-right: 12px;
 }
 
 .navItemsList li {
-	display: inline;
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.navItemsList .underLine {
+	height: 4px;
+	display: block;
+	width: 100%;
+}
+
+.navItemsList p {
+	margin-top: 4px;
+	line-height: 57px;
+	margin-bottom: 0px;
+	margin-right: 6px;
+	margin-left: 6px;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.navItemsList a:active .underLine {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navItemsList a:active p {
+	color: white;
 }
 
 
@@ -138,7 +159,9 @@ input[type="text"].searchText {
 	margin-right: 24px;
 	width: calc(100% - 74px);
 	font-size: 32px;
-	background-color: rgba(255, 255, 255, 0.0);
+	background-color: rgba(0, 0, 0, 0.0);
+	font-family: 'Roboto Condensed';
+	font-weight: 300;
 }
 
 
@@ -147,6 +170,8 @@ input[type="submit"].searchButton {
 	border: 0px;
 	border-radius: 4px;
 	background-color: #99CB38;
+	background-image: url(../icons/search.png);
+	background-position: center center;
 	color: white;
 	height: 50px;
 	width: 50px;
