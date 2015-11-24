@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
-<?php include "templates/head.php" ?>
+<?php include "include/head.php" ?>
 <body>
 
     <div id="wrapper">
-        <?php include "templates/header.php" ?>
+        <?php include "include/header.php" ?>
 
         <!-- content -->
         <div id="content">
@@ -74,7 +74,7 @@
         </div>
 
 
-        <?php include "templates/footer.php" ?>
+        <?php include "include/footer.php" ?>
 
     </div>
 
