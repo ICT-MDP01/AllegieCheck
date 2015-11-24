@@ -8,7 +8,7 @@
         <?php include "templates/header.php" ?>
         <!-- content -->
         
-        <div class="container underNav">
+        <div class="container">
             <h1>Contact</h1>
 
             <p>invultekst contactgegevens voor eigenaar site(moet nog komen)</p>
