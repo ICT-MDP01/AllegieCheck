@@ -1,46 +1,64 @@
 <!doctype html>
 <html>
-<?php include "templates/head.php" ?>
-<body>
-    <div id="wrapper">
+    
+    <?php include "templates/head.php" ?>
+    
+    <body>
+
         <?php include "templates/header.php" ?>
 
-        <div id="content">
-        <!-- alle content van de pagina -->
-            <div class = "bigImage underNav shadow restaurant">
-                <div class="overflowImage">
-                    <div class = "imageText">
-                        <h3>*RESTAURANT NAAM*</h3>
-                    </div>
-                </div>
+        <!-- content -->
+        <main id="content">
+            
+            <div class="banner">
+                <h1>Restaurant</h1>
+                <p><a href="/restaurant.php#restaurantContact">contact</a></p>
             </div>
+            
+            <div class="container">
 
-            <div class = "container">
-                <div class = "text">
-                    <h4>*Type*</h4>
-                        type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type type 
-                </div>
-                <div class = "text">
-                    <h4>Menu</h4>
-                    <h5>Voorgerechten</h5>
-                    
-                    <?php         
-                        $statement = $pdo->prepare("SELECT * FROM testtabel");
-                        $statement->execute();
-                        print("text");
-                        while ($row = $statement->fetch()) {
-                            $naam = $row["naam"];
-                            $achternaam = $row["achternaam"];
-                            print($naam . " " . $achternaam . "<br>");
-                        }
-    ​               
-                    ?>
-                </div>
-            </div>
-        </div>
+                 <!-- info restaurant -->
+                <div class="restaurantInfo">
+                    <h3>Mexicaans restaurant (type)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam. Donec tincidunt rhoncus turpis sed semper. In at est et erat faucibus scelerisque. Maecenas nec tristique erat, nec maximus mauris. Praesent ultrices eros lectus, in posuere purus consectetur in.</p>
+                    <br>
+                </div> <!-- /.restaurantInfo -->
+
+                <!-- opsomming gerechten -->
+                <div class="gerechten">
+                    <div class="gerecht">
+                        <h3>Gerechttitel</h3> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
+                        <p>vinkje</p>
+                    </div>
+
+                     <div class="gerecht">
+                        <h3>Gerechttitel</h3> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
+                        <p>vinkje</p>
+                    </div>
+
+                     <div class="gerecht">
+                        <h3>Gerechttitel</h3> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
+                    </div>
+                </div> <!-- /.restaurantGerechten -->
+
+                <div class="restaurantContact" id="restaurantContact">
+                    <p>campusstraat 60</p>
+                    <p>8372HS Zwolle</p>
+                    <p>info@restaurant.nl</p>
+                    <p>02 938472930</p>
+                    <div class="maps">
+                        <p>hier komt een kaartje</p>
+                    </div>
+                </div> 
+               
+
+            </div> <!-- /.container -->
+        </main>
 
         <?php include "templates/footer.php" ?>
-    </div>
-
-</body>
+        
+    </body>
 </html>

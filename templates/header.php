@@ -1,43 +1,30 @@
-<header>
-	
-	<nav>
-		<div class="navBar shadow">
+<header id="masthead" class="shadow">
 
-			<a href="index.php" class="logoAndTitle">
-				<img src="img/logo512.png" alt="">
-				<h1>Allergiecheck</h1>
-			</a>
+	<!-- logo -->
+	<a href="index.php" class="logoAndTitle">
+		<img src="img/logo512.png" alt="">
+		<h1>Allergiecheck</h1>
+	</a>
 
-			<div class="navItemsList">
-				<ul>
-					<li>
-						<a href="index.php">
-							<p>Home</p>
-							<div class="underLine"></div>
-						</a>
-					</li>
-					<li>
-						<a href="restaurants.php">
-							<p>Restaurants</p>
-							<div class="underLine"></div>
-						</a>
-					</li>
-					<li>
-						<a href="contact.php">
-							<p>Contact</p>
-							<div class="underLine"></div>
-						</a>
-					</li>
-					<li>
-						<a href="over.php">
-							<p>Over ons</p>
-							<div class="underLine"></div>
-						</a>
-					</li>
-				</ul>
-			</div>
-			
-		</div>
+	<!-- navigatie -->
+	<nav class="main-navigation">
+		<ul>
+			<li>
+				<a href="index.php" class="navLink active">Home</a>
+			</li>
+			<li>
+				<a href="restaurants.php" class="navLink">Restaurants</a>
+			</li>
+			<li>
+				<a href="contact.php" class="navLink">Contact</a>
+			</li>
+			<li>
+				<a href="over.php" class="navLink">Over ons</a>
+			</li>
+			<li>
+				<a href="login.php" class="navLink">Inloggen</a>
+			</li>
+		</ul>
 	</nav>
 
 </header>

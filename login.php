@@ -1,31 +1,39 @@
 <!doctype html>
 <html>
-<?php include "templates/head.php" ?>
-<body>
-    <div id="wrapper">
-        <?php include "templates/header.php" ?>
 
-        <div id="content">
-        <!-- alle content van de pagina -->
-            <div class="container underNav">
-		        <h1>Login template</h1>
+	<?php include "templates/head.php" ?>
 
-		        <p>badumm tss</p>
-				
+	<body>
+
+    	<?php include "templates/header.php" ?>
+
+    	<!-- content -->
+        <main id="content">
+            <div class="container">
+		        <h1>Inloggen</h1>
+
 				<form action="" method="post">
-					<h4>Gebruikersnaam</h4>
-					<input id="username" type="text">
-				
-					<h4>Wachtwoord</h4>
-					<input id="password" type="password">
-						<br>
-					<input type="submit" value="Inloggen">
+					<div>
+						<label for="email">Emailadres:</label>
+						<input name="email" type="email" id="email">
+					</div>
+					
+					<div>
+						<label for="password">Wachtwoord:</label>
+						<input name="password" type="password" id="password">
+					</div>
+
+					<div>
+						<input type="submit" value="Inloggen">
+					</div>
 				</form>
-            </div>
-        </div>
+
+				<a href="registreren.php">registreren</a>
+
+            </div> <!-- /.container -->
+        </main>
 
         <?php include "templates/footer.php" ?>
-    </div>
 
 </body>
 </html>

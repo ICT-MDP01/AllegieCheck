@@ -3,12 +3,11 @@
 <?php include "templates/head.php" ?>
 <body>
 
-    <div id="wrapper">
         <?php include "templates/header.php" ?>
 
         <!-- content -->
-        <div id="content">
-            <div class="bigImage underNav shadow">
+        <main id="content">
+            <div class="banner shadow">
                 <div class="overflowImage">
 
                     <div class="container">
@@ -47,36 +46,23 @@
 
                             </form>
                         </div>
-                    </div>
+                    </div> <!-- /.container -->
                 </div>
 
             </div>
 
-            <div class="container">
-                <p>Dit is een paragraaf</p> 
+            <div class="appInfo">
+                <div class="container">
+                    <p>Download de app</p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam. Donec tincidunt rhoncus turpis sed semper. In at est et erat faucibus scelerisque. Maecenas nec tristique erat, nec maximus mauris. Praesent ultrices eros lectus, in posuere purus consectetur in. Fusce eleifend leo ex, viverra lobortis ex vehicula sit amet. Proin lobortis tellus risus, aliquet hendrerit orci semper ut. Aliquam non imperdiet purus.
 
-                <p>Als de database connectie is gelukt dan staat er hieronder een lijstje met onze namen:</p>
-
-                <?php 
-                // php statement uit database
-                $statement = $pdo->prepare("SELECT * FROM testtabel");
-                $statement->execute();
-
-                while ($row = $statement->fetch()) {
-                    $naam = $row["naam"];
-                    $achternaam = $row["achternaam"];
-                    print($naam . " " . $achternaam . "<br>");
-                }
-
-                ?>
-
+Nunc tincidunt blandit nibh, hendrerit commodo magna euismod eget. Sed magna purus, posuere nec convallis in, pellentesque in justo. Aliquam pulvinar interdum lacus et congue. Aenean faucibus quam nec dictum pharetra. Pellentesque molestie mauris luctus justo maximus scelerisque. Phasellus tempus consectetur convallis. Vivamus tempor tincidunt velit vitae scelerisque. Integer convallis ex a faucibus accumsan. Morbi commodo nisi id nisl blandit malesuada. Pellentesque sodales, augue sit amet convallis interdum, libero tellus vulputate nisi, non finibus urna lectus eget lectus. Phasellus dapibus turpis neque, in consequat libero rhoncus nec.</p>
+                </div> <!-- container -->
             </div>
-        </div>
 
+        </main>
 
         <?php include "templates/footer.php" ?>
-
-    </div>
 
 </body>
 </html>
