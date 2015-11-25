@@ -1,0 +1,304 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 25, 2015 at 01:26 PM
+-- Server version: 5.7.9
+-- PHP Version: 5.5.9-1ubuntu4.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `allergiecheck`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `allergie`
+--
+
+CREATE TABLE `allergie` (
+  `allergie_id` int(11) NOT NULL,
+  `naam` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `favoriet`
+--
+
+CREATE TABLE `favoriet` (
+  `gebruiker_id` int(11) NOT NULL,
+  `restaurant_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gebruiker`
+--
+
+CREATE TABLE `gebruiker` (
+  `gebruiker_id` int(11) NOT NULL,
+  `email` varchar(99) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category` int(11) NOT NULL,
+  `username` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `voornaam` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `achternaam` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gerecht`
+--
+
+CREATE TABLE `gerecht` (
+  `gerecht_id` int(11) NOT NULL,
+  `restaurant_id` int(11) NOT NULL,
+  `naam` int(11) NOT NULL,
+  `informatie` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `allergie_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `heeft_allergie`
+--
+
+CREATE TABLE `heeft_allergie` (
+  `allergie_id` int(11) NOT NULL,
+  `gebruiker_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `niet_geschikt`
+--
+
+CREATE TABLE `niet_geschikt` (
+  `gerecht_id` int(11) NOT NULL,
+  `allergie_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restaurant`
+--
+
+CREATE TABLE `restaurant` (
+  `restaurant_id` int(11) NOT NULL,
+  `naam` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `straat` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `huisnummer` varchar(12) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `postcode` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `plaats` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefoon` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `website` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `soort_id` int(11) DEFAULT NULL,
+  `afbeelding` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `informatie` longtext COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restaurantsoort`
+--
+
+CREATE TABLE `restaurantsoort` (
+  `soort_id` int(11) NOT NULL,
+  `soort` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `review_id` int(11) NOT NULL,
+  `titel` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` longtext COLLATE utf8mb4_unicode_ci,
+  `rating` int(11) DEFAULT NULL,
+  `gebruiker_id` int(11) NOT NULL,
+  `restaurant_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testtabel`
+--
+
+CREATE TABLE `testtabel` (
+  `id` int(11) DEFAULT NULL,
+  `naam` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `achternaam` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `testtabel`
+--
+
+INSERT INTO `testtabel` (`id`, `naam`, `achternaam`) VALUES
+(1, 'Wilbert', 'Schepenaar'),
+(2, 'Richard', 'Sandbrink'),
+(3, 'Jochem', 'Schipper'),
+(4, 'Paul', 'Meen'),
+(5, 'Laurens', 'Zwaan'),
+(6, 'Elwin', 'Streekstra');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `allergie`
+--
+ALTER TABLE `allergie`
+  ADD PRIMARY KEY (`allergie_id`);
+
+--
+-- Indexes for table `favoriet`
+--
+ALTER TABLE `favoriet`
+  ADD PRIMARY KEY (`restaurant_id`,`gebruiker_id`),
+  ADD KEY `fk_favoriet_gebruiker1` (`gebruiker_id`);
+
+--
+-- Indexes for table `gebruiker`
+--
+ALTER TABLE `gebruiker`
+  ADD PRIMARY KEY (`gebruiker_id`);
+
+--
+-- Indexes for table `gerecht`
+--
+ALTER TABLE `gerecht`
+  ADD PRIMARY KEY (`gerecht_id`),
+  ADD KEY `fk_gerecht_restaurant_idx` (`restaurant_id`);
+
+--
+-- Indexes for table `heeft_allergie`
+--
+ALTER TABLE `heeft_allergie`
+  ADD PRIMARY KEY (`allergie_id`,`gebruiker_id`),
+  ADD KEY `fk_heeft_allergie_allergie1_idx` (`allergie_id`),
+  ADD KEY `fk_heeft_allergie_gebruiker1_idx` (`gebruiker_id`);
+
+--
+-- Indexes for table `niet_geschikt`
+--
+ALTER TABLE `niet_geschikt`
+  ADD PRIMARY KEY (`gerecht_id`,`allergie_id`),
+  ADD KEY `fk_niet_geschikt_allergie1_idx` (`allergie_id`);
+
+--
+-- Indexes for table `restaurant`
+--
+ALTER TABLE `restaurant`
+  ADD PRIMARY KEY (`restaurant_id`),
+  ADD KEY `fk_restaurant_restaurantsoort1_idx` (`soort_id`);
+
+--
+-- Indexes for table `restaurantsoort`
+--
+ALTER TABLE `restaurantsoort`
+  ADD PRIMARY KEY (`soort_id`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`review_id`),
+  ADD KEY `fk_review_gebruiker1_idx` (`gebruiker_id`),
+  ADD KEY `fk_review_restaurant1_idx` (`restaurant_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `allergie`
+--
+ALTER TABLE `allergie`
+  MODIFY `allergie_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `gebruiker`
+--
+ALTER TABLE `gebruiker`
+  MODIFY `gebruiker_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `gerecht`
+--
+ALTER TABLE `gerecht`
+  MODIFY `gerecht_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `restaurant`
+--
+ALTER TABLE `restaurant`
+  MODIFY `restaurant_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `restaurantsoort`
+--
+ALTER TABLE `restaurantsoort`
+  MODIFY `soort_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `favoriet`
+--
+ALTER TABLE `favoriet`
+  ADD CONSTRAINT `fk_favoriet_gebruiker1` FOREIGN KEY (`gebruiker_id`) REFERENCES `gebruiker` (`gebruiker_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_favoriet_restaurant1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `gerecht`
+--
+ALTER TABLE `gerecht`
+  ADD CONSTRAINT `fk_gerecht_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `heeft_allergie`
+--
+ALTER TABLE `heeft_allergie`
+  ADD CONSTRAINT `fk_heeft_allergie_allergie1` FOREIGN KEY (`allergie_id`) REFERENCES `allergie` (`allergie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_heeft_allergie_gebruiker1` FOREIGN KEY (`gebruiker_id`) REFERENCES `gebruiker` (`gebruiker_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `niet_geschikt`
+--
+ALTER TABLE `niet_geschikt`
+  ADD CONSTRAINT `fk_niet_geschikt_allergie1` FOREIGN KEY (`allergie_id`) REFERENCES `allergie` (`allergie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_niet_geschikt_gerecht1` FOREIGN KEY (`gerecht_id`) REFERENCES `gerecht` (`gerecht_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `restaurant`
+--
+ALTER TABLE `restaurant`
+  ADD CONSTRAINT `fk_restaurant_restaurantsoort1` FOREIGN KEY (`soort_id`) REFERENCES `restaurantsoort` (`soort_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `fk_review_gebruiker1` FOREIGN KEY (`gebruiker_id`) REFERENCES `gebruiker` (`gebruiker_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_review_restaurant1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
