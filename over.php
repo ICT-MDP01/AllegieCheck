@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
 <?php include "templates/head.php" ?>
+
+<?php $pageName="Over ons" ?>
+
 <body>
 
         <?php include "templates/header.php" ?>

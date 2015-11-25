@@ -3,6 +3,8 @@
     
     <?php include "templates/head.php" ?>
 
+    <?php $pageName="Registreren" ?>
+
     <body>
 
         <?php include "templates/header.php" ?>

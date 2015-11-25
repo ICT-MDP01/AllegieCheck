@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
 <?php include "templates/head.php" ?>
+
+<?php $pageName="Home" ?>
+
 <body>
 
         <?php include "templates/header.php" ?>
 
         <!-- content -->
         <main id="content">
-            <div class="banner shadow">
+            <div class="banner">
                 <div class="overflowImage">
 
                     <div class="container">

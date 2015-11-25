@@ -1,3 +1,10 @@
+<?php
+
+
+
+?>
+
+
 <header id="masthead" class="shadow">
 
 	<!-- logo -->
@@ -10,19 +17,19 @@
 	<nav class="main-navigation">
 		<ul>
 			<li>
-				<a href="index.php" class="navLink active">Home</a>
+				<a href="index.php" class=<?php printActiveClass($pageName, "Home") ?> >Home</a>
 			</li>
 			<li>
-				<a href="restaurants.php" class="navLink">Restaurants</a>
+				<a href="restaurants.php" class=<?php printActiveClass($pageName,"Restaurants") ?> >Restaurants</a>
 			</li>
 			<li>
-				<a href="contact.php" class="navLink">Contact</a>
+				<a href="contact.php" class=<?php printActiveClass($pageName,"Contact") ?> >Contact</a>
 			</li>
 			<li>
-				<a href="over.php" class="navLink">Over ons</a>
+				<a href="over.php" class=<?php printActiveClass($pageName,"Over ons") ?> >Over ons</a>
 			</li>
 			<li>
-				<a href="login.php" class="navLink">Inloggen</a>
+				<a href="login.php" class=<?php printActiveClass($pageName,"Inloggen") ?> >Inloggen</a>
 			</li>
 		</ul>
 	</nav>
