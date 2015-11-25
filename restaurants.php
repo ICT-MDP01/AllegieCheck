@@ -1,22 +1,61 @@
 <!doctype html>
 <html>
-<?php include "templates/head.php" ?>
-<body>
-    <div id="wrapper">
+    
+    <?php include "templates/head.php" ?>
+    
+    <body>
+
         <?php include "templates/header.php" ?>
 
-        <div id="content">
-        <!-- alle content van de pagina -->
-            <div class="container underNav">
-                <h1>Restaurants</h1>
-
-                <p>lipsum</p>
+        <!-- content -->
+        <main id="content">
+            
+            <div class="banner">
+                <h1>Gezocht op: Zoekresultaat</h1>
             </div>
-        </div>
+            
+            <div class="container">
+                 
+                <!-- zoekresultaat -->
+                <div class="restaurants">
+                    <div class="restaurant">
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Naam Restaurant</h3>
+                            <h5>Soort</h5>
+                            <p>Groningen</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant">
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Naam Restaurant</h3>
+                            <h5>Soort</h5>
+                            <p>Groningen</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant">
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Naam Restaurant</h3>
+                            <h5>Soort</h5>
+                            <p>Groningen</p>
+                        </div>
+                    </div>
+                </div> <!-- /.restaurants -->
+
+            </div> <!-- /.container -->
+        </main>
 
         <?php include "templates/footer.php" ?>
-    </div>
-
-</body>
+        
+    </body>
 </html>
-

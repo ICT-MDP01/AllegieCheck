@@ -1,27 +1,35 @@
 <!doctype html>
 <html>
-<?php include "templates/head.php" ?>
-<body>
-    <div id="wrapper">
+    
+    <?php include "templates/head.php" ?>
+
+    <body>
+    
         <?php include "templates/header.php" ?>
 
-        <div id="content">
-            <div class="container underNav">
-                <h1>Contact</h1>
+        <!-- content -->
+        <div class="container underNav">
 
-                <p>invultekst contactgegevens voor eigenaar site(moet nog komen)</p>
+            <h1>Contact</h1>
+            <p>Heb je vragen of kritiek? of wil je gewoon je mening achterlaten vul dan dit formulier in of stuur mij een email!</P>
+            
+            <form method="get" action="contact.php">
+                <label>Naam: 
+                     <input type="text" name="naam" value="">
+                </label><br>   
+                <label>Email: 
+                    <input type="email" name="email" value="">
+                </label><br>
+                <label>Bericht: 
+                    <textarea name="comment"></textarea>
+                </label><br>
                 
-                <p>Laat hier uw mening achter of geef uw feedback</p>
-                
-                <form method="get" action="contact.php">
-                    <textarea name="comment"></textarea><br>
-                    <input type="submit" name="Submit" value="Verstuur"><br>
-               </form>
-           </div>
+                <input type="submit" name="Submit" value="Verstuur"><br>
+           </form>
+
         </div>
-
+              
         <?php include "templates/footer.php" ?>
-    </div>
-
-</body>
+        
+    </body>
 </html>

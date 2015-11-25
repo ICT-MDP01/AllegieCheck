@@ -3,6 +3,16 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 
+
+/* 
+
+	1. BASE
+	2. UTILITIE
+	3. 
+
+
+ */
+
 body {
 	font-family: 'Roboto';
 }
@@ -11,6 +21,26 @@ html,
 body {
 	height: 100%;
 }
+
+ul, li {
+	margin: 0;
+}
+
+main {
+	padding-top: 65px;
+}
+
+a {
+	color: #99CB38;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #82ac38;
+	text-decoration: underline;
+}
+
+
 
 /* Utility elements */
 .shadow { 
@@ -23,18 +53,13 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.underNav { 
-	/* for every FIRST child that would be displayed under the NAVIGATION BAR without this class */
-	padding-top: 130px;
+.navLink {
+	color: #fff;
 }
 
-#wrapper {
-	min-height: 100%;
-	position: relative;
-}
-
-#content {
-	padding-bottom: 100px;
+.navLink:hover {
+	color: rgba(255,255,255,0.75);
+	text-decoration: none;
 }
 
 #restaurant {
@@ -45,21 +70,21 @@ body {
 
 
 /* Navigation bar (TOP OF SCREEN) */
-.navBar {
+#masthead {
 	background-color: #99CB38;
 	width: 100%;
 	height: 130px;
 	position: fixed;
-	z-index: 100; /* To always have navBar on top */
+	z-index: 100; /* To always have masthead on top */
 }
 
-.navBar .logoAndTitle {
+#masthead .logoAndTitle {
 	display: inline-block;
 	float: left;
 	margin-left: 10px;
 }
 
-.navBar .logoAndTitle h1 {
+#masthead .logoAndTitle h1 {
 	color: white;
 	font-size: 25px;
 	line-height: 65px;
@@ -69,7 +94,7 @@ body {
 	float: inherit;
 }
 
-.navBar .logoAndTitle img {
+#masthead .logoAndTitle img {
 	height: 65px;
 	margin-right: 12px;
 	vertical-align: middle;
@@ -77,50 +102,35 @@ body {
 	float: inherit;
 }
 
-.navBar a {
-	color: white;
-	text-decoration: none;
-	margin-right: 12px;
-}
-
-.navItemsList {
+.main-navigation {
 	display: inline-block;
 	width: 100%;
 }
 
-.navItemsList ul {
+.main-navigation ul {
 	line-height: 0px;
 	margin-bottom: 0px;
 	margin-left: 12px;
 	margin-right: 12px;
 }
 
-.navItemsList li {
+.main-navigation li {
 	display: inline-block;
 	margin-bottom: 0px;
 }
 
-.navItemsList .underLine {
-	height: 4px;
-	display: block;
-	width: 100%;
-}
-
-.navItemsList p {
-	margin-top: 4px;
+.main-navigation a {
+	display: inline-block;
+	padding: 4px 6px 0 6px;
 	line-height: 57px;
-	margin-bottom: 0px;
-	margin-right: 6px;
-	margin-left: 6px;
-	color: rgba(255, 255, 255, 0.9);
 }
 
-.navItemsList a:active .underLine {
-	background-color: rgba(255, 255, 255, 0.5);
+.main-navigation a:hover {
+	border-bottom: 4px solid rgba(255,255,255,0.2);
 }
 
-.navItemsList a:active p {
-	color: white;
+.main-navigation a.active {
+	border-bottom: 4px solid rgba(255,255,255, 1);
 }
 
 /* FOOTER */
@@ -128,9 +138,9 @@ body {
 	background-color: #464646;
     width: 100%;
     height: 100px;
-    position: absolute;
-	bottom: 0;
-	left: 0;
+ //    position: absolute;
+	// bottom: 0;
+	// left: 0;
 }
 
 .footer #copyright p {
@@ -168,35 +178,29 @@ body {
 }
 
 /* HOMEPAGE */
-.bigImage {
-	min-width: 100%;
+.banner {
+	background-color: #eee;
 }
 
-.bigImage .overflowImage {
+.banner .overflowImage {
 	background-image: url(../img/wok.jpg);
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: auto 100%;
+	background-size: cover;
 	min-height: 100%;
 	min-width: 100%;
 	overflow: hidden;
 }
 
-/* bigImage sizes */
+/* banner sizes */
 @media (min-width: 550px) {
-	.navBar {
+	#masthead {
 		height: 65px;
 	}
-	.navItemsList {
+	.main-navigation {
 		display: inline-block;
 		width: auto;
 		float: right;
-	}
-	.underNav {
-		padding-top: 65px;
-	}
-	.bigImage .overflowImage {
-		background-size: 100% auto;
 	}
 }
 
@@ -268,4 +272,13 @@ input[type="submit"].searchButton {
 	padding: 0px;
 	margin: 0px;
 	float: right;
+}
+
+.bordered {
+	border: solid black 2px;
+	margin-bottom: 10px;
+}
+
+.inBordered {
+	border-top: solid black 2px;
 }
