@@ -3,6 +3,8 @@
     
     <?php include "templates/head.php" ?>
 
+    <?php $pageName="Contact" ?>
+
     <body>
     
         <?php include "templates/header.php" ?>

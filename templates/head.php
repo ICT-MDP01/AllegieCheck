@@ -1,6 +1,9 @@
 <head>
 
-	<?php include "database.php" ?>
+	<?php 
+	include "database.php";
+	include "functions.php"
+	?>
 
 	<meta charset="utf-8">
 	<title>AllergieCheck</title>

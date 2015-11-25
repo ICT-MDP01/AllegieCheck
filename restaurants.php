@@ -2,6 +2,8 @@
 <html>
     
     <?php include "templates/head.php" ?>
+
+    <?php $pageName="Restaurants" ?>
     
     <body>
 
