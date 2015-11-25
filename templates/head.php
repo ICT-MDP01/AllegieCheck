@@ -1,6 +1,6 @@
 <head>
 
-	<?php // include "database.php" ?>
+	<?php include "database.php" ?>
 
 	<meta charset="utf-8">
 	<title>AllergieCheck</title>
