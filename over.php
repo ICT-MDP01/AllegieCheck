@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
-<?php include "include/head.php" ?>
+<?php include "templates/head.php" ?>
 <body>
     <div id="wrapper">
-        <?php include "include/header.php" ?>
+        <?php include "templates/header.php" ?>
 
         <div id="content">
         <!-- alle content van de pagina -->
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <?php include "include/footer.php" ?>
+        <?php include "templates/footer.php" ?>
     </div>
 
 </body>
