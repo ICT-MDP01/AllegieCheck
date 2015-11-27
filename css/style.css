@@ -7,7 +7,7 @@
 /* 
 
 	1. BASE
-	2. UTILITIE
+	2. UTILITIES
 	3. 
 
 
@@ -64,7 +64,7 @@ a:hover {
 #masthead {
 	background-color: #99CB38;
 	width: 100%;
-	height: 130px;
+	height: 65px;
 	position: fixed;
 	z-index: 100; /* To always have masthead on top */
 }
@@ -95,7 +95,7 @@ a:hover {
 
 .main-navigation {
 	display: inline-block;
-	width: 100%;
+	float: right;
 }
 
 .main-navigation ul {
@@ -136,9 +136,6 @@ a:hover {
 	background-color: #464646;
     width: 100%;
     height: 100px;
- //    position: absolute;
-	// bottom: 0;
-	// left: 0;
 }
 
 .footer #copyright p {
@@ -152,15 +149,15 @@ a:hover {
 }
 
 .footer #email {
-	background-image: url(../icons/email.png);
+	background-image: url(../img/icon-email.png);
 }
 
 .footer #facebook {
-	background-image: url(../icons/facebook.png);
+	background-image: url(../img/icon-facebook.png);
 }
 
 .footer #twitter {
-	background-image: url(../icons/twitter.png);
+	background-image: url(../img/icon-twitter.png);
 }
 
 .footer #email,
@@ -178,106 +175,122 @@ a:hover {
 /* HOMEPAGE */
 .banner {
 	background-color: #eee;
-}
-
-.banner .overflowImage {
 	background-image: url(../img/wok.jpg);
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 100%;
-	min-width: 100%;
-	overflow: hidden;
+}
+
+.banner h1,
+.banner h2,
+.banner h3,
+.banner h4,
+.banner h5,
+.banner h6 {
+	color: #fff;
+}
+
+.darken {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
 }
 
 /* banner sizes */
 @media (min-width: 550px) {
-	#masthead {
-		height: 65px;
-	}
-	.main-navigation {
-		display: inline-block;
-		width: auto;
-		float: right;
-	}
+	// #masthead {
+	// 	height: 65px;
+	// }
+	// .main-navigation {
+	// 	display: inline-block;
+	// 	width: auto;
+	// 	float: right;
+	// }
+}
+
+.banner .container {
+	padding: 100px 20px 75px;
 }
 
 .formDiv {
-	margin-top: 56px;
-	margin-bottom: 56px;
-	background-color: rgba(255, 255, 255, 0.95);
+	//background-color: rgba(255, 255, 255, 0.95);
 	vertical-align: middle;
-	margin-right: -24px;
-	margin-left: -24px;
 	border-radius: 4px;
 }
 
-.formDiv #checkBoxes {
+.formDiv #checkboxesAllergieen {
 	padding: 24px;
-	margin: 0px;
+	color: #fff;
+	text-align: center;
 }
 
-.searchBar {
+.formDiv #checkboxesAllergieen label {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+
+.searchArea {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	padding: 24px;
-	background-color: #99CB38;
+	position: relative;
 }
 
-input[type="text"].searchText {
-	color: white;
-	border-radius: 0px;
-	border: 0px;
-	border-bottom: 4px solid rgba(255, 255, 255, 0.8);
-	height: 50px;
-	margin: 0px;
-	margin-bottom: 0px;
-	width: calc(100% - 50px);
-	font-size: 32px;
-	background-color: rgba(0, 0, 0, 0.0);
-	font-family: 'Roboto Condensed';
-	font-weight: 300;
+.searchBar input,
+.searchBar input:focus {
+	// color: white;
+	// border: 1px solid #99CB38;
+	border: 0;
+	// border-bottom: 4px solid rgba(255, 255, 255, 0.8);
+	// height: 50px;
+	// margin: 0px;
+	// margin-bottom: 0px;
+	// width: calc(100% - 50px);
+	// font-size: 32px;
+	// background-color: rgba(0, 0, 0, 0.0);
+	// font-family: 'Roboto Condensed';
+	// font-weight: 300;
 }
 
-.searchText::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, 0.8);
+.searchText {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-.searchText:-moz-placeholder { /* Firefox 18- */
-   color: rgba(255, 255, 255, 0.8);
+// .searchText::-webkit-input-placeholder {
+// 	color: rgba(255, 255, 255, 0.8);
+// }
+
+// .searchText:-moz-placeholder { /* Firefox 18- */
+//    color: rgba(255, 255, 255, 0.8);
+// }
+
+// .searchText::-moz-placeholder {  /* Firefox 19+ */
+//    color: rgba(255, 255, 255, 0.8);
+// }
+
+// .searchText:-ms-input-placeholder {  
+//    color: rgba(255, 255, 255, 0.8);
+// }
+
+.searchButton {
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	right: 10px;
 }
 
-.searchText::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba(255, 255, 255, 0.8);
-}
-
-.searchText:-ms-input-placeholder {  
-   color: rgba(255, 255, 255, 0.8);
-}
-
-
-input[type="submit"].searchButton {
-	opacity: 0.8;
-	border: 0px;
-	border-bottom: 4px solid white;
-	border-radius: 0px;
-	background-color: #99CB38;
-	background-image: url(../icons/search.png);
-	background-position: center center;
-	color: white;
-	height: 50px;
-	width: 50px;
+.searchButton input,
+.searchButton button {
+	border: none;
 	padding: 0px;
 	margin: 0px;
 	float: right;
 }
 
-.bordered {
-	border: solid black 2px;
-	margin-bottom: 10px;
-}
-
-.inBordered {
-	border-top: solid black 2px;
+.searchButton button i {
+	font-size: 200%;
+	color: #222;
 }
