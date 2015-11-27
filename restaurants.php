@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
     
-    <?php include "templates/head.php" ?>
+    <?php include "includes/head.php" ?>
 
     <?php $pageName="Restaurants" ?>
     
     <body>
 
-        <?php include "templates/header.php" ?>
+        <?php include "includes/header.php" ?>
 
         <!-- content -->
         <main id="content">
@@ -57,7 +57,7 @@
             </div> <!-- /.container -->
         </main>
 
-        <?php include "templates/footer.php" ?>
+        <?php include "includes/footer.php" ?>
         
     </body>
 </html>

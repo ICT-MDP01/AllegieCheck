@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
     
-    <?php include "templates/head.php" ?>
+    <?php include "includes/head.php" ?>
 
     <?php $pageName="Registreren" ?>
 
     <body>
 
-        <?php include "templates/header.php" ?>
+        <?php include "includes/header.php" ?>
 
 
         <!-- content -->
@@ -63,7 +63,7 @@
 
 		</main>
  
-        <?php include "templates/footer.php" ?>
+        <?php include "includes/footer.php" ?>
         
     </body>
 </html>

@@ -1,10 +1,3 @@
-<?php
-
-
-
-?>
-
-
 <header id="masthead" class="shadow">
 
 	<!-- logo -->
