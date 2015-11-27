@@ -188,6 +188,7 @@ a:hover {
 .banner h4,
 .banner h5,
 .banner h6 {
+	margin-top: 50px;
 	color: #fff;
 }
 
@@ -230,6 +231,9 @@ a:hover {
 	margin: 0 10px;
 }
 
+.searchTitle {
+	text-align: center;
+}
 
 .searchArea {
 	border-top-left-radius: 4px;
@@ -293,4 +297,14 @@ a:hover {
 .searchButton button i {
 	font-size: 200%;
 	color: #222;
+}
+
+.appInfo {
+	padding: 50px 0;
+	//height: 750px;
+	background-color: #ddd;
+	text-align: center;
+}
+.appInfo .container {
+	max-width: 500px;
 }
