@@ -1,12 +1,17 @@
+<?php 
+
+// pageinfo
+$pageName = "Over ons";
+
+?>
+
 <!doctype html>
 <html>
-<?php include "includes/head.php" ?>
-
-<?php $pageName="Over ons" ?>
+<?php include "includes/head.php"; ?>
 
 <body>
 
-        <?php include "includes/header.php" ?>
+        <?php include "includes/header.php"; ?>
 
         <!-- content -->
         <main id="content">
@@ -21,7 +26,7 @@
 
         </main>
 
-        <?php include "includes/footer.php" ?>
+        <?php include "includes/footer.php"; ?>
 
 
 </body>

@@ -1,13 +1,18 @@
+<?php 
+
+// pageinfo
+$pageName = "Restaurant";
+
+?>
+
 <!doctype html>
 <html>
     
-    <?php include "includes/head.php" ?>
-
-    <?php $pageName="Restaurant" ?>
+    <?php include "includes/head.php"; ?>
     
     <body>
 
-        <?php include "includes/header.php" ?>
+        <?php include "includes/header.php"; ?>
 
         <!-- content -->
         <main id="content">
@@ -60,7 +65,7 @@
             </div> <!-- /.container -->
         </main>
 
-        <?php include "includes/footer.php" ?>
+        <?php include "includes/footer.php"; ?>
         
     </body>
 </html>

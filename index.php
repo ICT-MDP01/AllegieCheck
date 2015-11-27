@@ -1,10 +1,16 @@
+<?php 
+
+// pageinfo
+$pageName = "Home";
+
+?>
+
 <!doctype html>
 <html>
-<?php include "includes/head.php" ?>
 
-<?php $pageName="Home" ?>
-
-<body>
+    <?php include "includes/head.php" ?>
+    
+    <body>
 
         <?php include "includes/header.php" ?>
 

@@ -1,13 +1,18 @@
+<?php 
+
+// pageinfo
+$pageName = "Registreren";
+
+?>
+
 <!doctype html>
 <html>
     
-    <?php include "includes/head.php" ?>
-
-    <?php $pageName="Registreren" ?>
+    <?php include "includes/head.php"; ?>
 
     <body>
 
-        <?php include "includes/header.php" ?>
+        <?php include "includes/header.php"; ?>
 
 
         <!-- content -->
@@ -63,7 +68,7 @@
 
 		</main>
  
-        <?php include "includes/footer.php" ?>
+        <?php include "includes/footer.php"; ?>
         
     </body>
 </html>

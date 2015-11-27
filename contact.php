@@ -1,13 +1,18 @@
+<?php 
+
+// pageinfo
+$pageName = "Contact";
+
+?>
+
 <!doctype html>
 <html>
     
-    <?php include "includes/head.php" ?>
-
-    <?php $pageName="Contact" ?>
+    <?php include "includes/head.php"; ?>
 
     <body>
     
-        <?php include "includes/header.php" ?>
+        <?php include "includes/header.php"; ?>
 
         <!-- content -->
         <main id="content">
@@ -31,8 +36,9 @@
                </form>
 
             </div>
-        </main>      
-        <?php include "includes/footer.php" ?>
+        </main>   
+
+        <?php include "includes/footer.php"; ?>
         
     </body>
 </html>
