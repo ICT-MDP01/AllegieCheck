@@ -14,12 +14,18 @@ $pageName = "Restaurants";
 
         <?php include "includes/header.php"; ?>
 
-        <!-- content -->
-        <main id="content">
-            
-            <div class="banner">
-                <h1>Gezocht op: Zoekresultaat</h1>
+        <!-- content -->     
+        <div class="banner">
+            <div class="darken">
+                <div class="bannerTitle">
+                    <div class="container">
+                        <h1>Gezocht op: Zoekresultaat</h1>
+                    </div>
+                </div>
             </div>
+        </div>
+
+         <main id="content">
             
             <div class="container">
                  
