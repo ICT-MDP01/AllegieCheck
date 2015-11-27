@@ -17,19 +17,25 @@ $pageName = "Home";
         <!-- content -->
         <main id="content">
             <div class="banner">
-                <div class="overflowImage">
-
+                <div class="darken">
                     <div class="container">
-                        <div class="formDiv shadow">
+
+                        <div class="formDiv">
 
                             <form method="get" action="restaurants.php">
-                                <div class="searchBar shadow">
-                                    <input type="text" name="query" class="searchText" placeholder="Zoek een stad of restaurant type">
-                                    <input type="submit" value="" class="searchButton"><br>
+
+                                <!-- zoekbalk -->
+                                <div class="searchArea">
+                                    <div class="searchBar">
+                                        <input type="text" name="query" class="searchText" placeholder="Zoek een stad of restaurant type">
+                                    </div>
+                                    <div class="searchButton">
+                                        <button type="submit" class=""><i class="fa fa-search"></i></button>
+                                    </div>
                                 </div>
 
-                                <!-- for Skeleton, checkboxes are prefereably wrapped in <label> tags -->
-                                <div id="checkBoxes">
+                                <!-- allergieen checkboxes -->
+                                <div id="checkboxesAllergieen">
                                     <label for="allergie1">
                                         <input type="checkbox" id="allergie1" value="allergie1" />
                                         <span>Allergie 1</span>
@@ -51,13 +57,11 @@ $pageName = "Home";
                                         <span>Allergie 5</span>
                                     </label>
                                 </div>
-
-
                             </form>
-                        </div>
+        
+                        </div> 
                     </div> <!-- /.container -->
                 </div>
-
             </div>
 
             <div class="appInfo">
