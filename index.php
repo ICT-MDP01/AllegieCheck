@@ -39,28 +39,32 @@ $pageName = "home";
                                 </div>
 
                                 <!-- allergieen checkboxes -->
+                                <h5 class="allergieenTitle">Selecteer uw allergie(ën)</h5>
                                 <div id="checkboxesAllergieen">
-                                    <label for="allergie1">
-                                        <input type="checkbox" id="allergie1" value="allergie1" />
-                                        <span>Allergie 1</span>
-                                    </label>
-                                    <label for="allergie2">
-                                        <input type="checkbox" id="allergie2" value="allergie2" />
-                                        <span>Allergie 2</span>
-                                    </label>
-                                    <label for="allergie3">
-                                        <input type="checkbox" id="allergie3" value="allergie3" />
-                                        <span>Allergie 3</span>
-                                    </label>
-                                    <label for="allergie4">
-                                        <input type="checkbox" id="allergie4" value="allergie4" />
-                                        <span>Allergie 4</span>
-                                    </label>
-                                    <label for="allergie5">
-                                        <input type="checkbox" id="allergie5" value="allergie5" />
-                                        <span>Allergie 5</span>
-                                    </label>
+
+                                    <?php
+                                        // prepared statement
+                                        $stmt = $pdo->prepare("SELECT * FROM allergie");
+                                        $stmt->execute();
+                                        $allergieen = $stmt->fetchAll();
+
+                                    ?>
+
+                                    <?php foreach ($allergieen as $allergie) { ?>
+                                  
+                                        <label for="<?php print($allergie['naam']); ?>" >
+                                            <input 
+                                            type="checkbox" 
+                                            id="allergie-<?php print($allergie['allergie_id']); ?>"
+                                            name="<?php print($allergie['allergie_id']); ?>" />
+                                            <span><?php print($allergie["naam"]); ?> </span>
+                                        </label>
+
+                                    <?php } ?>
                                 </div>
+
+                                <input type="hidden" name="gezocht" value="true">
+
                             </form>
         
                         </div> 
