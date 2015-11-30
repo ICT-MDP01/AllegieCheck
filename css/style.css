@@ -1,18 +1,15 @@
 
 
-@import url(//fonts.googleapis.com/css?family=Roboto:300);
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,500);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 
 
 /* 
-
 	1. BASE
 	2. UTILITIES
 	3. HEADER
 	4. FOOTER
 	5.
-
-
 */
 
 /* 
@@ -36,9 +33,14 @@ main {
 	padding-top: 64px;
 }
 
+p {
+	font-weight: 400;
+}
+
 a {
 	color: #99CB38;
 	text-decoration: none;
+	font-weight: 500;
 }
 
 a:hover {
@@ -117,21 +119,22 @@ a:hover {
 }
 
 .navLink a {
-	color: rgba(255,255,255,0.85);
+	color: rgba(255, 255, 255, 0.85);
 	text-decoration: none;
 }
 
-.navLink:hover {
-	border-bottom: 4px solid rgba(255,255,255,0.2);
-	color: #fff;
-}
-
-.navLink.active {
-	border-bottom: 4px solid rgba(255,255,255, 1);
+.navLink a:hover {
+	border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .navLink.active a {
+	border-bottom: 4px solid rgba(0, 0, 0, 0.4);
 	color: #fff;
+}
+
+.navLink.active a:hover {
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .loginLink a {
@@ -139,17 +142,18 @@ a:hover {
 }
 
 .loginLink a span {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.25);
 	border-radius: 3px;
 	padding: 5px 10px;
 }
 
-.loginLink:hover {
+.loginLink:hover a {
 	border: none;
+	color: white;
 }
 
 .loginLink:hover a span {
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*  
@@ -253,6 +257,7 @@ a:hover {
 .formDiv #checkboxesAllergieen label {
 	display: inline-block;
 	margin: 0 10px;
+	font-weight: 300;
 }
 
 .searchTitle {
@@ -304,4 +309,8 @@ a:hover {
 }
 .appInfo .container {
 	max-width: 500px;
+}
+
+.searchBar input[type="text"]::-ms-clear {
+	display: none;
 }
