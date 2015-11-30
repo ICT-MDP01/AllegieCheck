@@ -16,10 +16,15 @@ $pageName = "restaurant";
 
         <!-- content -->
         <main id="content">
-            
             <div class="banner">
-                <h1>Restaurant</h1>
-                <p><a href="/restaurant.php#restaurantContact">contact</a></p>
+                <div class="darken">
+                    <div class="bannerTitle">
+                        <div class="container">
+                            <h1>Restaurant</h1>
+                            <p><a href="/restaurant.php#restaurantContact">contact</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="container">
