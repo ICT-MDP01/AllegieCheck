@@ -1,7 +1,7 @@
 <?php 
 
 // pageinfo
-$pageName = "Over ons";
+$pageName = "over ons";
 
 ?>
 

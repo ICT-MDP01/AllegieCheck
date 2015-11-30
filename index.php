@@ -1,7 +1,7 @@
 <?php 
 
 // pageinfo
-$pageName = "Home";
+$pageName = "home";
 
 ?>
 
@@ -25,13 +25,13 @@ $pageName = "Home";
                             <form method="get" action="restaurants.php">
 
                                 <div class="searchTitle">
-                                    <h1>Zoek uw favoriete restaurant</h1>
+                                    <h1>Vind uw favoriete restaurant</h1>
                                 </div>
 
                                 <!-- zoekbalk -->
                                 <div class="searchArea">
                                     <div class="searchBar">
-                                        <input type="text" name="query" class="searchText" placeholder="Zoek een stad of restaurant type">
+                                        <input type="text" name="query" class="searchText" placeholder="zoek op plaats of restaurantnaam">
                                     </div>
                                     <div class="searchButton">
                                         <button type="submit" class=""><i class="fa fa-search"></i></button>
