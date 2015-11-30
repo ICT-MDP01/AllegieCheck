@@ -15,21 +15,20 @@
 	1. BASE
 */
 
-body {
-	font-family: 'Roboto';
-}
+
 
 html,
 body {
 	height: 100%;
 }
 
-ul, li {
-	margin: 0;
+body {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	transition: 0.1s ease-in-out;
 }
 
-main {
-	padding-top: 64px;
+ul, li {
+	margin: 0;
 }
 
 p {
@@ -40,6 +39,10 @@ a {
 	color: #99CB38;
 	text-decoration: none;
 	font-weight: 500;
+}
+
+img {
+	width: 100%;
 }
 
 a:hover {
@@ -63,97 +66,229 @@ a:hover {
 	3. HEADER
 */
 
+/* mobile navigation */
 #masthead {
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-200px);
+	z-index: 999;
 	background-color: #99CB38;
-	width: 100%;
-	height: 64px;
-	position: fixed;
-	z-index: 100; /* To always have masthead on top */
 }
 
-#masthead .logoAndTitle {
+#masthead, #content {
+	transition: 0.1s ease-in-out;
+}
+
+#masthead ul li {
+ 	list-style: none;
+}
+
+.menuOpen #masthead .navLink a {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.menuOpen #masthead .navLink a:hover {
+	background-color: rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.logoAndTitle {
+	display: block;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.logoAndTitle h1 {
 	display: inline-block;
-	float: left;
-	margin-left: 10px;
-}
-
-#masthead .logoAndTitle h1 {
-	color: white;
-	font-size: 25px;
-	line-height: 65px;
-	margin-bottom: 0px;
+	float: inherit;
+	font-size: 20px;
 	font-weight: 300;
-	display: inline-block;
-	float: inherit;
-}
-
-#masthead .logoAndTitle img {
-	height: 65px;
-	margin-right: 12px;
-	vertical-align: middle;
-	display: inline-block;
-	float: inherit;
-}
-
-.main-navigation {
-	display: inline-block;
-	float: right;
-}
-
-.main-navigation ul {
-	margin: 0 12px;
-}
-
-.main-navigation li {
-	display: inline-block;
-	margin-bottom: 0px;
-}
-
-.navLink a {
-	display: inline-block;
-	// padding: 4px 6px 0 6px;
-	margin: 0 2px;
-	padding: 20px 10px 16px 10px;
-	//line-height: 57px;
-}
-
-.navLink a {
-	color: rgba(255, 255, 255, 0.85);
-	text-decoration: none;
-}
-
-.navLink a:hover {
-	border-bottom: 4px solid rgba(0, 0, 0, 0.2);
-	color: rgba(0, 0, 0, 0.4);
-}
-
-.navLink.active a {
-	border-bottom: 4px solid rgba(0, 0, 0, 0.4);
 	color: #fff;
 }
 
-.navLink.active a:hover {
-	color: rgba(0, 0, 0, 0.4);
+.navLink a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
 }
 
-.loginLink a {
-	padding: 13px 0;
+/* hamburger */
+#hamburger {
+  width: 50px;
+  height: 50px;
+  padding: 25px 15px;
+  position: absolute;
+  top: 0;
+  right: -80px;
+  transition: 0.1s ease-in-out;
+  border: none !important;
 }
 
-.loginLink a span {
-	background-color: rgba(0, 0, 0, 0.25);
-	border-radius: 3px;
-	padding: 5px 10px;
+#hamburger span, 
+#hamburger span:before, 
+#hamburger span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 4px;
+  width: 25px;
+  position: absolute;
+  display: block;
+  content: '';
+  background-color: #99CB38;
+  transition: 0.1s ease-in-out;
 }
 
-.loginLink:hover a {
-	border: none;
-	color: white;
+#hamburger span:before {
+  top: -8px;
+}
+#hamburger span:after {
+  bottom: -8px; 
 }
 
-.loginLink:hover a span {
-	background-color: rgba(0, 0, 0, 0.3);
+/* Tranisition styles */
+body.menuOpen {
+	overflow: hidden;
 }
+
+body.menuOpen #masthead {
+	transform: translateX(0px);
+}
+
+body.menuOpen #content {
+	transform: translateX(200px);
+}
+
+body.menuOpen #hamburger span {
+  background-color: transparent;
+}
+
+body.menuOpen #hamburger span:before {
+	top: 0;
+    transform: rotate(45deg);
+}
+
+body.menuOpen #hamburger span:after {
+	top: 0;
+    transform: rotate(-45deg);
+}
+
+body.menuOpen #menuOpenOverlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+/* desktop navigation */
+@media screen and (min-width: 710px) {
+
+	#masthead #hamburger {
+		display: none;
+	}
+	main {
+		padding-top: 64px;
+	}	
+
+	#masthead {
+		width: 100%;
+		height: 64px;
+		position: fixed;
+		z-index: 100; /* To always have masthead on top */
+		transform: translateX(0px);
+	}
+
+	.logoAndTitle {
+		display: inline-block;
+		float: left;
+		margin-left: 10px;
+	}
+
+	.logoAndTitle h1 {
+		font-size: 25px;
+		line-height: 65px;
+		margin-bottom: 0px;
+		font-weight: 300;
+		display: inline-block;
+		float: inherit;
+	}
+
+	.logoAndTitle img {
+		height: 65px;
+		width: auto;
+		margin-right: 12px;
+		vertical-align: middle;
+		display: inline-block;
+		float: inherit;
+	}
+
+	.main-navigation {
+		display: inline-block;
+		float: right;
+	}
+
+	.main-navigation ul {
+		margin: 0 12px;
+	}
+
+	.main-navigation li {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+
+	.navLink a {
+		display: inline-block;
+		margin: 0 2px;
+		padding: 20px 10px 16px 10px;
+		border: none;
+	}
+
+	.navLink a {
+		color: rgba(255, 255, 255, 0.85);
+		text-decoration: none;
+	}
+
+	.navLink a:hover {
+		border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+		color: rgba(0, 0, 0, 0.4);
+	}
+
+	.navLink.active a {
+		border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+		color: #fff;
+	}
+
+	.navLink.active a:hover {
+		color: rgba(0, 0, 0, 0.4);
+	}
+
+	.loginLink a {
+		padding: 13px 0;
+	}
+
+	.loginLink a span {
+		background-color: rgba(0, 0, 0, 0.25);
+		border-radius: 3px;
+		padding: 5px 10px;
+	}
+
+	.loginLink:hover a {
+		border: none;
+		color: white;
+	}
+
+	.loginLink:hover a span {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+
 
 /*  
 	4. FOOTER
