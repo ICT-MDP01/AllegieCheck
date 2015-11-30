@@ -31,7 +31,7 @@ $pageName = "home";
                                 <!-- zoekbalk -->
                                 <div class="searchArea">
                                     <div class="searchBar">
-                                        <input type="text" name="query" class="searchText" placeholder="zoek op plaats of restaurantnaam">
+                                        <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam">
                                     </div>
                                     <div class="searchButton">
                                         <button type="submit" class=""><i class="fa fa-search"></i></button>
