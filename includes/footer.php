@@ -2,7 +2,7 @@
 <script src="js/main.js"></script>
 
 
-<div class="footer shadow">
+<footer id="footer" class="footer shadow">
 	<div class="container">
 		<div class="six columns" id="copyright">
 			<p>&copy; AllergieCheck</p>
@@ -19,9 +19,11 @@
 			</a>
 		</div>
 
-
 	</div>
-</div>
+</footer>
+
+<!-- dark overlay whem mobile menu is open -->
+<div id='menuOpenOverlay'></div>
 
 
 

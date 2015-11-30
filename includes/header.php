@@ -1,11 +1,14 @@
 <header id="masthead" class="shadow">
 
+	<!-- hamburger button for opening mobile menu -->
+	<a href="#" id="hamburger"><span></span></a>
+
 	<!-- logo -->
-	<a href="index.php" class="logoAndTitle">
+	 <a href="index.php" class="logoAndTitle">
 		<img src="img/logo512.png" alt="">
 		<h1>AllergieCheck</h1>
 	</a>
-
+ 	
 	<!-- navigatie -->
 	<nav class="main-navigation">
 		<ul>
