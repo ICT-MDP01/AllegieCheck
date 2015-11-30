@@ -9,20 +9,20 @@
 	<!-- navigatie -->
 	<nav class="main-navigation">
 		<ul>
-			<li>
-				<a href="index.php" class=<?php printActiveClass($pageName, "Home") ?> >Home</a>
+			<li class="navLink <?php print(activeClass($pageName, 'home')); ?>">
+				<a href="index.php">Home</a>
 			</li>
-			<li>
-				<a href="restaurants.php" class=<?php printActiveClass($pageName,"Restaurants") ?> >Restaurants</a>
+			<li class="navLink <?php print(activeClass($pageName, 'restaurants')); ?>">
+				<a href="restaurants.php">Restaurants</a>
 			</li>
-			<li>
-				<a href="contact.php" class=<?php printActiveClass($pageName,"Contact") ?> >Contact</a>
+			<li class="navLink <?php print(activeClass($pageName, 'over ons')); ?>">
+				<a href="over.php">Over ons</a>
 			</li>
-			<li>
-				<a href="over.php" class=<?php printActiveClass($pageName,"Over ons") ?> >Over ons</a>
+			<li class="navLink <?php print(activeClass($pageName, 'contact')); ?>">
+				<a href="contact.php">Contact</a>
 			</li>
-			<li>
-				<a href="login.php" class=<?php printActiveClass($pageName,"Inloggen") ?> >Inloggen</a>
+			<li class="navLink loginLink">
+				<a href="login.php"><span>Inloggen</span></a>
 			</li>
 		</ul>
 	</nav>
