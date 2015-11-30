@@ -1,6 +1,6 @@
 
 
-@import url(//fonts.googleapis.com/css?family=Roboto:300);
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,500);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 
 
@@ -20,6 +20,10 @@ body {
 html,
 body {
 	height: 100%;
+}
+
+p {
+	font-weight: 400;
 }
 
 ul, li {
@@ -117,18 +121,19 @@ a:hover {
 }
 
 .main-navigation a {
-	color: rgba(255,255,255,0.85);
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 500;
 }
 
 .main-navigation a:hover {
-	border-bottom: 4px solid rgba(255,255,255,0.2);
-	color: white;
+	border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.5);
 	text-decoration: none;
 }
 
 .main-navigation a.active {
 	color: white;
-	border-bottom: 4px solid rgba(255,255,255, 1);
+	border-bottom: 4px solid rgba(0, 0, 0, 0.5);
 }
 
 /* FOOTER */
@@ -228,6 +233,7 @@ a:hover {
 
 .formDiv #checkboxesAllergieen label {
 	display: inline-block;
+	font-weight: 300;
 	margin: 0 10px;
 }
 
@@ -254,7 +260,7 @@ a:hover {
 	// font-size: 32px;
 	// background-color: rgba(0, 0, 0, 0.0);
 	// font-family: 'Roboto Condensed';
-	// font-weight: 300;
+	font-weight: 300;
 }
 
 .searchText {
