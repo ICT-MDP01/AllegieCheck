@@ -19,7 +19,11 @@ $pageName = "restaurants";
             <div class="darken">
                 <div class="bannerTitle">
                     <div class="container">
-                        <h1>Gezocht op: Zoekresultaat</h1>
+                        <?php if (isset($_GET["gezocht"])) { ?>
+                            <h1>Gezocht op: <?php print($_GET["query"]); ?></h1>
+                        </php } else { ?>
+                            <h1>Alle restaurants</h1>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -34,9 +38,9 @@ $pageName = "restaurants";
 
                 <?php
                     // prepared statement
-                    $stmt = $pdo->prepare("SELECT * FROM restaurant");
+                    $stmt = $pdo->prepare("SELECT * FROM restaurant r INNER JOIN restaurantsoort s ON r.soort_id = s.soort_id");
                     $stmt->execute();
-                    $restaurants = $stmt->fetchAll();
+                    $restaurants = $stmt->fetchAll();   
 
                 ?>
 
@@ -44,11 +48,11 @@ $pageName = "restaurants";
 
                      <div class="restaurant">
                         <div>
-                            <img src="" alt="">
+                            <img src="<?php print $restaurant["afbeelding"];?>" alt="" width="170" height="120">
                         </div>
                         <div>
                             <h3><?php print $restaurant["naam"]; ?></h3>
-                            <h5><?php print $restaurant["soort_id"]; ?></h5>
+                            <h5><?php print $restaurant["soort"]; ?></h5>
                             <p><?php print $restaurant["plaats"]; ?></p>
                         </div>
                     </div>
