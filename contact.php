@@ -1,7 +1,7 @@
 <?php 
 
 // pageinfo
-$pageName = "Contact";
+$pageName = "contact";
 
 ?>
 

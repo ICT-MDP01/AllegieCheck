@@ -1,7 +1,7 @@
 <?php 
 
 // pageinfo
-$pageName = "Registreren";
+$pageName = "registreren";
 
 ?>
 
