@@ -22,17 +22,27 @@ $pageName = "contact";
                 <p>Heb je vragen of kritiek? of wil je gewoon je mening achterlaten vul dan dit formulier in of stuur mij een email!</P>
                 
                 <form method="get" action="contact.php">
-                    <label>Naam: 
-                         <input type="text" name="naam" value="">
-                    </label><br>   
-                    <label>Email: 
-                        <input type="email" name="email" value="">
-                    </label><br>
-                    <label>Bericht: 
-                        <textarea name="comment"></textarea>
-                    </label><br>
+                    <div class="six columns">
+                        <label for="naam">
+                            <label class="u-full-width">Naam:</label>
+                            <input class="u-full-width" type="text" name="naam" value="">
+                        </label> 
+                    </div>
+                    <div class="six columns">
+                        <label for="email">
+                            <label class="u-full-width">Email:</label>
+                            <input class="u-full-width" type="email" name="email" value="">
+                        </label>
+                    </div>
+                    <div class="twelve columns">
+                        <label for="comment">
+                            <label class="u-full-width">Bericht:</label>
+                            <textarea class="u-full-width" name="comment"></textarea>
+                        </label>
+                    </div>
+
                     
-                    <input type="submit" name="Submit" value="Verstuur"><br>
+                    <input class="button-primary" type="submit" name="Submit" value="Verstuur"><br>
                </form>
 
             </div>

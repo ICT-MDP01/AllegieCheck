@@ -40,7 +40,7 @@ $pageName = "restaurant";
                     <div class="bannerTitle">
                         <div class="container">
                             <h1><?php print($restaurant["naam"]); ?></h1>
-                            <p><a href="/restaurant.php#restaurantContact">contact</a></p>
+                            <p><?php print($restaurant["soort"]); ?></p>
                         </div>
                     </div>
                 </div>
@@ -50,13 +50,14 @@ $pageName = "restaurant";
 
                  <!-- info restaurant -->
                 <div class="restaurantInfo">
-                    <h3><?php print($restaurant["soort"]); ?></h3>
+                    <h3></h3>
                     <p><?php print($restaurant["informatie"]) ?></p>
                     <br>
                 </div> <!-- /.restaurantInfo -->
 
                 <!-- opsomming gerechten -->
                 <div class="gerechten">
+                    <h3>Gerechten</h3>
 
                     <?php
                         // prepared statement
@@ -68,10 +69,18 @@ $pageName = "restaurant";
 
                     <?php foreach ($gerechten as $gerecht) { ?>
 
-                        <div class="gerecht">
-                            <h3><?php print($gerecht["naam"]); ?></h3> 
-                            <p><?php print($gerecht["informatie"]); ?></p>
-                            <p>vinkje</p>
+                        <div class="gerecht shadow">
+                            <div class="gerechtBar">
+                                <div class="gerechtTitle">
+                                    <h5><?php print($gerecht["naam"]); ?></h5>
+                                </div>
+                                <div class="gerechtVink">
+                                    <p>vinkje</p>   
+                                </div>
+                            </div>
+                            <div class="gerechtDesc">
+                                <p><?php print($gerecht["informatie"]); ?></p>
+                            </div>
                         </div>
 
                     <?php } ?>
