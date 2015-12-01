@@ -41,7 +41,6 @@ $pageName = "restaurants";
                     $stmt = $pdo->prepare("SELECT * FROM restaurant r INNER JOIN restaurantsoort s ON r.soort_id = s.soort_id");
                     $stmt->execute();
                     $restaurants = $stmt->fetchAll();   
-
                 ?>
 
                 <?php foreach ($restaurants as $restaurant) { ?>

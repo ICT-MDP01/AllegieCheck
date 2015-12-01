@@ -471,7 +471,6 @@ body.menuOpen #menuOpenOverlay {
 .restaurantInfo {
 	display: inline-block;
 	height: 100%;
-	margin: 0 12px;
 	vertical-align: top;
 }
 

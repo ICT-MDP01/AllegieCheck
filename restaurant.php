@@ -14,13 +14,32 @@ $pageName = "restaurant";
 
         <?php include "includes/header.php"; ?>
 
+            <?php
+
+                if (isset($_GET["id"])) {
+                    $restaurant_id = $_GET["id"];
+                } else {
+                    $restaurant_id = "Error";
+                }
+
+                // prepared statement
+                $stmt = $pdo->prepare(" SELECT * FROM restaurant r 
+                                        INNER JOIN restaurantsoort s 
+                                        ON r.soort_id = s.soort_id
+                                        WHERE restaurant_id='$restaurant_id'");
+                $stmt->execute();
+                $restaurant = $stmt->fetchAll();
+                $restaurant = $restaurant[0];
+
+            ?>
+
         <!-- content -->
         <main id="content">
-            <div class="banner">
+            <div class="banner" style="background-image: url(<?php print($restaurant["afbeelding"]); ?>);">
                 <div class="darken">
                     <div class="bannerTitle">
                         <div class="container">
-                            <h1>Restaurant</h1>
+                            <h1><?php print($restaurant["naam"]); ?></h1>
                             <p><a href="/restaurant.php#restaurantContact">contact</a></p>
                         </div>
                     </div>
@@ -31,36 +50,40 @@ $pageName = "restaurant";
 
                  <!-- info restaurant -->
                 <div class="restaurantInfo">
-                    <h3>Mexicaans restaurant (type)</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam. Donec tincidunt rhoncus turpis sed semper. In at est et erat faucibus scelerisque. Maecenas nec tristique erat, nec maximus mauris. Praesent ultrices eros lectus, in posuere purus consectetur in.</p>
+                    <h3><?php print($restaurant["soort"]); ?></h3>
+                    <p><?php print($restaurant["informatie"]) ?></p>
                     <br>
                 </div> <!-- /.restaurantInfo -->
 
                 <!-- opsomming gerechten -->
                 <div class="gerechten">
-                    <div class="gerecht">
-                        <h3>Gerechttitel</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
-                        <p>vinkje</p>
-                    </div>
 
-                     <div class="gerecht">
-                        <h3>Gerechttitel</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
-                        <p>vinkje</p>
-                    </div>
+                    <?php
+                        // prepared statement
+                        $stmt = $pdo->prepare(" SELECT * FROM gerecht g
+                                                WHERE restaurant_id='$restaurant_id'");
+                        $stmt->execute();
+                        $gerechten = $stmt->fetchAll();
+                    ?>
 
-                     <div class="gerecht">
-                        <h3>Gerechttitel</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit et odio in consequat. Aenean in blandit quam.</p>
-                    </div>
+                    <?php foreach ($gerechten as $gerecht) { ?>
+
+                        <div class="gerecht">
+                            <h3><?php print($gerecht["naam"]); ?></h3> 
+                            <p><?php print($gerecht["informatie"]); ?></p>
+                            <p>vinkje</p>
+                        </div>
+
+                    <?php } ?>
+
                 </div> <!-- /.restaurantGerechten -->
 
                 <div class="restaurantContact" id="restaurantContact">
-                    <p>campusstraat 60</p>
-                    <p>8372HS Zwolle</p>
-                    <p>info@restaurant.nl</p>
-                    <p>02 938472930</p>
+                    <p><?php print($restaurant["straat"]); ?></p>
+                    <p><?php print($restaurant["postcode"]); ?> <?php print($restaurant["plaats"]); ?></p>
+                    <p><?php print($restaurant["email"]); ?></p>
+                    <p><?php print($restaurant["telefoon"]); ?></p>
+                    <p><?php print($restaurant["website"]); ?></p>
                     <div class="maps">
                         <p>hier komt een kaartje</p>
                     </div>
