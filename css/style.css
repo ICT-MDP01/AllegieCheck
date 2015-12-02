@@ -530,6 +530,13 @@ body.menuOpen #menuOpenOverlay {
 		line-height: 48px;
 	}
 
+	.gerechtAllergie {
+		height: 36px;
+		width: 36px;
+		margin: 6px 0px;
+		display: inline-block;
+	}
+
 .gerechtDesc {
 	display: inline-block;
 	width: calc(100% - 24px);
