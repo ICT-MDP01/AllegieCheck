@@ -1,2 +1,1 @@
-# KBS_Project
-Dit is ons kbs project!!!
+# het KBS project
