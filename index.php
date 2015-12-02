@@ -56,6 +56,9 @@ $pageName = "home";
                                         type="checkbox" 
                                         id="allergie-<?php print($allergie['allergie_id']); ?>"
                                         name="<?php print($allergie['allergie_id']); ?>" />
+                                        <div class="allergieIcon">
+                                            <?php include $allergie["icon"] ?>
+                                        </div>
                                         <span><?php print($allergie["naam"]); ?> </span>
                                     </label>
 
