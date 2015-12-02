@@ -93,9 +93,10 @@ $pageName = "restaurant";
                     <p><?php print($restaurant["email"]); ?></p>
                     <p><?php print($restaurant["telefoon"]); ?></p>
                     <p><?php print($restaurant["website"]); ?></p>
-                    <div class="maps">
-                        <p>hier komt een kaartje</p>
-                    </div>
+
+                    <iframe class="maps shadow" frameborder="0" style="border:0" 
+                        src="https://www.google.com/maps/embed/v1/place?q=<?php print($restaurant["naam"] . " " . $restaurant["postcode"]) ?>&key=AIzaSyDgMfv7G4Ax3VOOr89xxdxAda5NEuYgWV4" allowfullscreen="true">
+                    </iframe>
                 </div> 
                
 
