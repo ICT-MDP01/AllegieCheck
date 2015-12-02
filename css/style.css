@@ -41,6 +41,11 @@ a {
 	font-weight: 500;
 }
 
+main {
+	padding-top: 64px;
+	background-color: #F1F1F1;
+}
+
 img {
 	width: 100%;
 }
@@ -188,9 +193,6 @@ body.menuOpen #menuOpenOverlay {
 	#masthead #hamburger {
 		display: none;
 	}
-	main {
-		padding-top: 64px;
-	}	
 
 	#masthead {
 		width: 100%;
@@ -293,7 +295,6 @@ body.menuOpen #menuOpenOverlay {
 .footer {
 	background-color: #464646;
     width: 100%;
-    height: 100px;
 }
 
 .footer #copyright p {
@@ -347,6 +348,10 @@ body.menuOpen #menuOpenOverlay {
 .banner h5,
 .banner h6 {
 	margin-top: 50px;
+	color: #fff;
+}
+
+.banner p {
 	color: #fff;
 }
 
@@ -437,9 +442,7 @@ body.menuOpen #menuOpenOverlay {
 }
 
 .appInfo {
-	padding: 50px 0;
 	//height: 750px;
-	background-color: #ddd;
 	text-align: center;
 }
 .appInfo .container {
@@ -484,6 +487,54 @@ body.menuOpen #menuOpenOverlay {
 
 .restaurantInfo p {
 	vertical-align: bottom;
+}
+
+/* RESTAURANT */
+
+.gerecht {
+	background-color: white;
+	border-radius: 4px;
+	margin: 0 -12px 12px -12px;
+}
+
+.gerechtBar {
+	display: inline-block;
+	width: 100%;
+}
+
+	.gerechtTitle {
+		display: inline-block;
+		margin: 0 12px;
+		float: left;
+	}
+
+	.gerechtTitle h5 {
+		margin: 0;
+		line-height: 48px;
+	}
+
+	.gerechtVink {
+		display: inline-block;
+		margin: 0 12px;
+		float: right;
+	}
+
+	.gerechtVink p {
+		margin: 0;
+		line-height: 48px;
+	}
+
+.gerechtDesc {
+	display: inline-block;
+	width: calc(100% - 24px);
+	border-top: 2px solid rgba(0, 0, 0, 0.1);
+	margin: 0 12px 12px 12px;
+}
+
+.gerechtDesc p {
+	margin: 0;
+	width: 100%;
+	margin-top: 12px;
 }
 
 

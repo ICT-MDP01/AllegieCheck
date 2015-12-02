@@ -15,63 +15,63 @@ $pageName = "home";
         <?php include "includes/header.php" ?>
 
         <!-- content -->
-        <main id="content">
-            <div class="banner">
-                <div class="darken">
-                    <div class="container">
+        <div class="banner">
+            <div class="darken">
+                <div class="container">
 
-                        <div class="formDiv">
+                    <div class="formDiv">
 
-                            <form method="get" action="restaurants.php">
+                        <form method="get" action="restaurants.php">
 
-                                <div class="searchTitle">
-                                    <h1>Vind uw favoriete restaurant</h1>
+                            <div class="searchTitle">
+                                <h1>Vind uw favoriete restaurant</h1>
+                            </div>
+
+                            <!-- zoekbalk -->
+                            <div class="searchArea">
+                                <div class="searchBar">
+                                    <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam">
                                 </div>
-
-                                <!-- zoekbalk -->
-                                <div class="searchArea">
-                                    <div class="searchBar">
-                                        <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam">
-                                    </div>
-                                    <div class="searchButton">
-                                        <button type="submit" class=""><i class="fa fa-search"></i></button>
-                                    </div>
+                                <div class="searchButton">
+                                    <button type="submit" class=""><i class="fa fa-search"></i></button>
                                 </div>
+                            </div>
 
-                                <!-- allergieen checkboxes -->
-                                <h5 class="allergieenTitle">Selecteer uw allergie(ën)</h5>
-                                <div id="checkboxesAllergieen">
+                            <!-- allergieen checkboxes -->
+                            <h5 class="allergieenTitle">Selecteer uw allergie(ën)</h5>
+                            <div id="checkboxesAllergieen">
 
-                                    <?php
-                                        // prepared statement
-                                        $stmt = $pdo->prepare("SELECT * FROM allergie");
-                                        $stmt->execute();
-                                        $allergieen = $stmt->fetchAll();
+                                <?php
+                                    // prepared statement
+                                    $stmt = $pdo->prepare("SELECT * FROM allergie");
+                                    $stmt->execute();
+                                    $allergieen = $stmt->fetchAll();
 
-                                    ?>
+                                ?>
 
-                                    <?php foreach ($allergieen as $allergie) { ?>
-                                  
-                                        <label for="<?php print($allergie['naam']); ?>" >
-                                            <input 
-                                            type="checkbox" 
-                                            id="allergie-<?php print($allergie['allergie_id']); ?>"
-                                            name="<?php print($allergie['allergie_id']); ?>" />
-                                            <span><?php print($allergie["naam"]); ?> </span>
-                                        </label>
+                                <?php foreach ($allergieen as $allergie) { ?>
+                              
+                                    <label for="<?php print($allergie['naam']); ?>" >
+                                        <input 
+                                        type="checkbox" 
+                                        id="allergie-<?php print($allergie['allergie_id']); ?>"
+                                        name="<?php print($allergie['allergie_id']); ?>" />
+                                        <span><?php print($allergie["naam"]); ?> </span>
+                                    </label>
 
-                                    <?php } ?>
-                                </div>
+                                <?php } ?>
+                            </div>
 
-                                <input type="hidden" name="gezocht" value="true">
+                            <input type="hidden" name="gezocht" value="true">
 
-                            </form>
-        
-                        </div> 
-                    </div> <!-- /.container -->
-                </div>
+                        </form>
+    
+                    </div> 
+                </div> <!-- /.container -->
             </div>
+        </div>
 
+        <main id="content">
             <div class="appInfo">
                 <div class="container">
                     <h1>Download de app</h1> 
