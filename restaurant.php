@@ -61,8 +61,20 @@ $pageName = "restaurant";
 
                     <?php
                         // prepared statement
-                        $stmt = $pdo->prepare(" SELECT * FROM gerecht g
-                                                WHERE restaurant_id='$restaurant_id'");
+                        $stmt = $pdo->prepare(" SELECT ng.gerecht_id, a.icon, a.naam
+                                                FROM allergie a
+                                                RIGHT JOIN niet_geschikt ng
+                                                ON a.allergie_id = ng.allergie_id
+                                                WHERE ng.gerecht_id IN (SELECT gerecht_id
+                                                                        FROM gerecht
+                                                                        WHERE restaurant_id = $restaurant_id )");
+                        $stmt->execute();
+                        $allergieIconen = $stmt->fetchAll();
+
+
+                        $stmt = $pdo->prepare(" SELECT gerecht_id, naam, informatie
+                                                FROM gerecht
+                                                WHERE restaurant_id = $restaurant_id");
                         $stmt->execute();
                         $gerechten = $stmt->fetchAll();
                     ?>
@@ -75,11 +87,21 @@ $pageName = "restaurant";
                                     <h5><?php print($gerecht["naam"]); ?></h5>
                                 </div>
                                 <div class="gerechtVink">
-                                    <p>vinkje</p>   
+                                    <?php 
+                                    foreach ($allergieIconen as $icon) {
+                                        if($gerecht["gerecht_id"] == $icon["gerecht_id"]) { ?>
+
+                                        <div class="gerechtAllergie" title="<?php print($icon["naam"]) ?>">
+                                            <?php include $icon["icon"] ?>
+                                        </div>
+
+                                        <?php } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
                             <div class="gerechtDesc">
                                 <p><?php print($gerecht["informatie"]); ?></p>
+                                <?php  ?>
                             </div>
                         </div>
 
@@ -88,14 +110,14 @@ $pageName = "restaurant";
                 </div> <!-- /.restaurantGerechten -->
 
                 <div class="restaurantContact" id="restaurantContact">
-                    <p><?php print($restaurant["straat"]); ?></p>
-                    <p><?php print($restaurant["postcode"]); ?> <?php print($restaurant["plaats"]); ?></p>
-                    <p><?php print($restaurant["email"]); ?></p>
-                    <p><?php print($restaurant["telefoon"]); ?></p>
-                    <p><?php print($restaurant["website"]); ?></p>
+                    <p><?php print($restaurant["straat"]); ?><br>
+                       <?php print($restaurant["postcode"]); ?> <?php print($restaurant["plaats"]); ?><br>
+                       <?php print($restaurant["email"]); ?><br>
+                       <?php print($restaurant["telefoon"]); ?><br>
+                       <?php print($restaurant["website"]); ?></p>
 
                     <iframe class="maps shadow" frameborder="0" style="border:0" 
-                        src="https://www.google.com/maps/embed/v1/place?q=<?php print($restaurant["naam"] . " " . $restaurant["postcode"]) ?>&key=AIzaSyDgMfv7G4Ax3VOOr89xxdxAda5NEuYgWV4" allowfullscreen="true">
+                        src="https://www.google.com/maps/embed/v1/place?q=<?php print($restaurant["naam"] . " " . $restaurant["postcode"]) ?>&key=AIzaSyDgMfv7G4Ax3VOOr89xxdxAda5NEuYgWV4">
                     </iframe>
                 </div> 
                
