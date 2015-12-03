@@ -30,7 +30,7 @@ $pageName = "home";
                             <!-- zoekbalk -->
                             <div class="searchArea">
                                 <div class="searchBar">
-                                    <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam">
+                                    <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam" onClick="this.setSelectionRange(0, this.value.length)">
                                 </div>
                                 <div class="searchButton">
                                     <button type="submit" class=""><i class="fa fa-search"></i></button>
@@ -56,9 +56,9 @@ $pageName = "home";
                                         type="checkbox" 
                                         id="allergie-<?php print($allergie['allergie_id']); ?>"
                                         name="<?php print($allergie['allergie_id']); ?>" />
-                                        <div class="allergieIcon">
-                                            <?php include $allergie["icon"] ?>
-                                        </div>
+                                        <!-- <div class="allergieIcon"> -->
+                                            <?php //include $allergie["icon"] ?>
+                                        <!-- </div> -->
                                         <span><?php print($allergie["naam"]); ?> </span>
                                     </label>
 
