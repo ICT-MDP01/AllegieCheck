@@ -8,6 +8,7 @@ $pageName = "profiel";
 <!doctype html>
 <html>
     <?php include "includes/head.php"; ?>
+    <?php $gebruiker_id = $_SESSION['gebruiker_id']; ?>
     
     <body>
 
@@ -42,8 +43,7 @@ $pageName = "profiel";
                             $stmt = $pdo->prepare("SELECT * FROM restaurant r 
                                 INNER JOIN restaurantsoort s ON r.soort_id = s.soort_id
                                 INNER JOIN favoriet f ON r.restaurant_id = f.restaurant_id
-                                WHERE f.gebruiker_id = $gebruiker_ID_GET;
-                                ");
+                                WHERE f.gebruiker_id = $gebruiker_id; ");
                             $stmt->execute();
                             $restaurants = $stmt->fetchAll();   
                         ?>
