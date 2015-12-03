@@ -27,6 +27,7 @@ $pageName = "restaurants";
                                         OR r.postcode LIKE '%" . $query . "%'
                                         OR s.soort LIKE '%" . $query . "%' "); 
             } else {
+                $query = "";
                 $stmt = $pdo->prepare(" SELECT * FROM restaurant r 
                                         INNER JOIN restaurantsoort s 
                                         ON r.soort_id = s.soort_id");
