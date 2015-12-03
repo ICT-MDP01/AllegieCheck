@@ -24,9 +24,21 @@
 			<li class="navLink <?php print(activeClass($pageName, 'contact')); ?>">
 				<a href="contact.php">Contact</a>
 			</li>
-			<li class="navLink loginLink">
-				<a href="login.php"><span>Inloggen</span></a>
-			</li>
+			
+			<?php if(isset($_SESSION['email'])){
+				$email = $_SESSION['email']; ?> 
+
+				<li class="navLink loginLink">
+					<a href="profile.php"><span>Mijn profiel</span></a>
+				</li>
+		
+			<?php } else { ?>
+				<li class="navLink loginLink">
+					<a href="login.php"><span>Inloggen</span></a>
+				</li>
+
+			<?php } ?>
+			
 		</ul>
 	</nav>
 
