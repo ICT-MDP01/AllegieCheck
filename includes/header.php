@@ -29,7 +29,7 @@
 				$email = $_SESSION['email']; ?> 
 
 				<li class="navLink loginLink">
-					<a href="profile.php"><span>Mijn profiel</span></a>
+					<a href="profiel.php"><span>Mijn profiel</span></a>
 				</li>
 		
 			<?php } else { ?>
