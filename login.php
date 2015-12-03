@@ -29,7 +29,7 @@ $pageName = "inloggen";
 					
 					if(isset($_POST['email'], $_POST['password'])){
 				
-						$sql = "SELECT email,  password FROM gebruiker WHERE email=:email AND password=:password";
+						$sql = "SELECT gebruiker_id, email, category, password, username, voornaam, achternaam FROM gebruiker WHERE email=:email AND password=:password";
 						$stmt = $pdo->prepare($sql);
 						$stmt->bindParam(':email', $_POST['email']);
 						$stmt->bindParam(':password', $_POST['password']);
