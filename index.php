@@ -30,7 +30,7 @@ $pageName = "home";
                             <!-- zoekbalk -->
                             <div class="searchArea">
                                 <div class="searchBar">
-                                    <input type="text" name="query" class="searchText" placeholder="Zoek op plaats of restaurantnaam" onClick="this.setSelectionRange(0, this.value.length)">
+                                    <input type="text" name="query" class="searchText" placeholder="Zoek op plaats, naam of restaurantsoort" onClick="this.setSelectionRange(0, this.value.length)">
                                 </div>
                                 <div class="searchButton">
                                     <button type="submit" class=""><i class="fa fa-search"></i></button>
